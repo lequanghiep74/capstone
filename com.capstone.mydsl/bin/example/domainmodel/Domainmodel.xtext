@@ -1,0 +1,39 @@
+grammar org.xtext.example.domainmodel.Domainmodel with org.eclipse.xtext.common.Terminals
+
+generate domainmodel "http://www.xtext.org/example/domainmodel/Domainmodel"
+
+
+Model:
+	myDSL+=myDSL*;
+	
+myDSL:
+	Enum | Define;
+	
+NUMBER:
+	{IntType}
+;
+
+TEXT: 
+	{StringType}
+;
+
+//enum
+
+Enum: 'enum' name=ID '{' EnumOptions '}';
+
+EnumElement: 'EQUI' | 'ISO' | 'SCA' | 'NOT';
+
+EnumOptions: (EnumElement (',' EnumElement)*)*;
+
+//pre
+
+
+//define
+
+Define: 'define' name=ID '{' '}';
+
+ConditionOperation: '||' | '&&';
+
+MathOperation: '+' | '-' | '*' | '/' | '^' | '%';
+
+CompareOperation: '>' | '<' | '==' | '!=' | '>=' | '<=';
