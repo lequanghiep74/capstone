@@ -30,7 +30,7 @@ EnumOptions: (EnumElement (',' EnumElement)*)*;
 
 //define
 
-MathFormula: ID | (ID ( MathOperation ID)*)* ;
+MathFormula: (ID ( MathOperation ID)*)* ;
 
 Define: 'define' name=ID '{'
 		MathFormula CompareOperation MathFormula (CompareOperation MathFormula)*
