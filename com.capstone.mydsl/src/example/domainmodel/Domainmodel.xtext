@@ -7,15 +7,23 @@ Model:
 	myDSL+=myDSL*;
 	
 myDSL:
-	Enum | Define;
+	Enum | Define | Precondition | Testcase;
 	
-NUMBER:
-	{IntType}
+terminal DIGIT:
+    ('0'..'9')
 ;
 
-TEXT: 
-	{StringType}
-;
+ConditionOperation: '||' | '&&';
+
+MathOperation: '+' | '-' | '*' | '/' | '^' | '%';
+
+CompareOperation: '>' | '<' | '==' | '!=' | '>=' | '<=';
+
+Variable: ID | DIGIT;
+
+MathFormula: Variable ( MathOperation Variable)*;
+
+CompareFormula: MathFormula CompareOperation MathFormula;
 
 //enum
 
@@ -25,20 +33,22 @@ EnumElement: 'EQUI' | 'ISO' | 'SCA' | 'NOT';
 
 EnumOptions: (EnumElement (',' EnumElement)*)*;
 
-//pre
-
-
 //define
-
-MathFormula: (ID ( MathOperation ID)*)* ;
-
 Define: 'define' name=ID '{'
-		MathFormula CompareOperation MathFormula (CompareOperation MathFormula)*
+		CompareFormula (ConditionOperation CompareFormula)*
 	'}'
 ;
 
-ConditionOperation: '||' | '&&';
+//pre
+Precondition: 'precondition' '{' 
+		CompareFormula (ConditionOperation CompareFormula)*
+	'}'
+;
 
-MathOperation: '+' | '-' | '*' | '/' | '^' | '%';
-
-CompareOperation: '>' | '<' | '==' | '!=' | '>=' | '<=';
+//testcase
+Testcase : 'testcase:' name=ID '{'
+		'"'name=ID'"' CompareFormula (ConditionOperation CompareFormula)*
+		| ('"'name=ID'"' CompareFormula (ConditionOperation CompareFormula)*)*
+	'}'
+;
+	
