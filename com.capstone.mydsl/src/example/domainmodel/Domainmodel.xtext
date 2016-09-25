@@ -13,6 +13,10 @@ terminal DIGIT:
     ('0'..'9')
 ;
 
+terminal STRING	: 
+  '"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
+  "'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
+
 ConditionOperation: '||' | '&&';
 
 MathOperation: '+' | '-' | '*' | '/' | '^' | '%';
@@ -25,6 +29,7 @@ MathFormula: Variable ( MathOperation Variable)*;
 
 CompareFormula: MathFormula CompareOperation MathFormula;
 
+TestcaseElement: CompareFormula | MathFormula;
 //enum
 
 Enum: 'enum' name=ID '{' EnumOptions '}';
@@ -47,8 +52,8 @@ Precondition: 'precondition' '{'
 
 //testcase
 Testcase : 'testcase:' name=ID '{'
-		'"'name=ID'"' CompareFormula (ConditionOperation CompareFormula)*
-		| ('"'name=ID'"' CompareFormula (ConditionOperation CompareFormula)*)*
+		STRING TestcaseElement (ConditionOperation TestcaseElement)*
+		| (STRING TestcaseElement (ConditionOperation TestcaseElement)*)*
 	'}'
 ;
 	
