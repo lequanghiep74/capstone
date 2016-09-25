@@ -23,13 +23,16 @@ MathOperation: '+' | '-' | '*' | '/' | '^' | '%';
 
 CompareOperation: '>' | '<' | '==' | '!=' | '>=' | '<=';
 
-Variable: ID | DIGIT;
+Variable: MyID | DIGIT;
 
 MathFormula: Variable ( MathOperation Variable)*;
 
 CompareFormula: MathFormula CompareOperation MathFormula;
 
 TestcaseElement: CompareFormula | MathFormula;
+
+MyID: ID | ('!')+ID;
+
 //enum
 
 Enum: 'enum' name=ID '{' EnumOptions '}';
@@ -40,7 +43,7 @@ EnumOptions: (EnumElement (',' EnumElement)*)*;
 
 //define
 Define: 'define' name=ID '{'
-		(CompareFormula | ID) (ConditionOperation (CompareFormula | ID))*
+		(CompareFormula | MyID) (ConditionOperation (CompareFormula | MyID))*
 	'}'
 ;
 
