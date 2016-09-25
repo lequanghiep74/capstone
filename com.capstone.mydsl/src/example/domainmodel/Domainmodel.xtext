@@ -40,18 +40,18 @@ EnumOptions: (EnumElement (',' EnumElement)*)*;
 
 //define
 Define: 'define' name=ID '{'
-		CompareFormula (ConditionOperation CompareFormula)*
+		(CompareFormula | ID) (ConditionOperation (CompareFormula | ID))*
 	'}'
 ;
 
-//pre
+//precondition
 Precondition: 'precondition' '{' 
 		CompareFormula (ConditionOperation CompareFormula)*
 	'}'
 ;
 
-//testcase
-Testcase : 'testcase:' name=ID '{'
+//test case
+Testcase : 'testcase' name=ID '{'
 		STRING TestcaseElement (ConditionOperation TestcaseElement)*
 		| (STRING TestcaseElement (ConditionOperation TestcaseElement)*)*
 	'}'
