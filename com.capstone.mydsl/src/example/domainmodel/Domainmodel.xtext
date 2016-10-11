@@ -7,7 +7,7 @@ Model:
 	myDSL+=myDSL*;
 	
 myDSL:
-	Enum | Define | Precondition | Testcase;
+	Scenario;
 	
 terminal DIGIT:
     ('0'..'9')
@@ -16,6 +16,11 @@ terminal DIGIT:
 terminal STRING	: 
   '"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
   "'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
+ 
+terminal ID: 
+    '^'?('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+    
+STRINGWQ: (ID)*;
 
 ConditionOperation: '||' | '&&';
 
@@ -33,30 +38,24 @@ TestcaseElement: CompareFormula | MathFormula;
 
 MyID: ID | ('!')+ID;
 
-//enum
-
-Enum: 'enum' name=ID '{' EnumOptions '}';
-
-EnumElement: 'EQUI' | 'ISO' | 'SCA' | 'NOT';
-
-EnumOptions: (EnumElement (',' EnumElement)*)*;
-
-//define
-Define: 'define' name=ID '{'
-		(CompareFormula | MyID) (ConditionOperation (CompareFormula | MyID))*
-	'}'
+Scenario:
+	'scenario' STRINGWQ
+		Given
+		When
+		Then
 ;
 
-//precondition
-Precondition: 'precondition' '{' 
-		CompareFormula (ConditionOperation CompareFormula)*
-	'}'
+Then:
+	'then' STRINGWQ
+	('and' STRINGWQ)*
 ;
 
-//test case
-Testcase : 'testcase' name=ID '{'
-		STRING TestcaseElement (ConditionOperation TestcaseElement)*
-		| (STRING TestcaseElement (ConditionOperation TestcaseElement)*)*
-	'}'
+When:
+	'when' STRINGWQ 
+	('and' STRINGWQ)*
 ;
-	
+
+Given:
+	'given' STRINGWQ
+	('and' STRINGWQ)*
+;
