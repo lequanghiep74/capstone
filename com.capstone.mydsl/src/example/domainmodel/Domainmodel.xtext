@@ -17,10 +17,13 @@ terminal STRING	:
   '"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
   "'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
  
-terminal ID: 
-    '^'?('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
-    
-STRINGWQ: (ID)*;
+terminal TYPE: ('a'..'z'|'A'..'Z' | '.' | ',' |'(' | ')' | '\'' | '"')
+	('a'..'z'|'A'..'Z'|'0'..'9'|'_'| '.' | ',' |'(' | ')' | '\'' | '"')*
+;
+
+MYID: TYPE | ID;
+
+STRINGWQ: (MYID | ConditionOperation | MathOperation | CompareOperation)*;
 
 ConditionOperation: '||' | '&&';
 
@@ -28,7 +31,7 @@ MathOperation: '+' | '-' | '*' | '/' | '^' | '%';
 
 CompareOperation: '>' | '<' | '==' | '!=' | '>=' | '<=';
 
-Variable: MyID | DIGIT;
+Variable: MYID | DIGIT;
 
 MathFormula: Variable ( MathOperation Variable)*;
 
@@ -36,7 +39,7 @@ CompareFormula: MathFormula CompareOperation MathFormula;
 
 TestcaseElement: CompareFormula | MathFormula;
 
-MyID: ID | ('!')+ID;
+Keyword: '['MYID']';
 
 Scenario:
 	'scenario' STRINGWQ
@@ -46,16 +49,16 @@ Scenario:
 ;
 
 Then:
-	'then' STRINGWQ
+	'then' STRINGWQ (Keyword STRINGWQ)* 
 	('and' STRINGWQ)*
 ;
 
 When:
-	'when' STRINGWQ 
-	('and' STRINGWQ)*
+	'when' STRINGWQ (Keyword STRINGWQ)*  
+	('and' STRINGWQ (Keyword STRINGWQ)* )*
 ;
 
 Given:
-	'given' STRINGWQ
-	('and' STRINGWQ)*
+	'given' STRINGWQ (Keyword STRINGWQ)* 
+	('and' STRINGWQ (Keyword STRINGWQ)* )*
 ;
