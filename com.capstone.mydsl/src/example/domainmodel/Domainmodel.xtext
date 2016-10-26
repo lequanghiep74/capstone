@@ -7,7 +7,7 @@ Model:
 	myDSL+=myDSL*;
 	
 myDSL:
-	Enum | Define | Precondition | Testcase;
+	Enum | Define | Precondition | Testcase | Function | Run;
 	
 terminal DIGIT:
     ('0'..'9')
@@ -27,7 +27,7 @@ Variable: MyID | DIGIT;
 
 MathFormula: Variable ( MathOperation Variable)*;
 
-CompareFormula: MathFormula CompareOperation MathFormula;
+CompareFormula: MathFormula CompareOperation MathFormula | MathFormula CompareOperation STRING;
 
 TestcaseElement: CompareFormula | MathFormula;
 
@@ -43,7 +43,7 @@ EnumOptions: (EnumElement (',' EnumElement)*)*;
 
 //define
 Define: 'define' name=ID '{'
-		(CompareFormula | MyID) (ConditionOperation (CompareFormula | MyID))*
+		'('?(CompareFormula | MyID)')'? (ConditionOperation '('?(CompareFormula | MyID)')'?)*
 	'}'
 ;
 
@@ -54,9 +54,15 @@ Precondition: 'precondition' '{'
 ;
 
 //test case
-Testcase : 'testcase' name=ID '{'
-		STRING TestcaseElement (ConditionOperation TestcaseElement)*
-		| (STRING TestcaseElement (ConditionOperation TestcaseElement)*)*
+Testcase : 'testcase' '{'
+		STRING '('? TestcaseElement ')'? '('?(ConditionOperation '('? TestcaseElement ')'?)* ')'?
+		| (STRING '('? TestcaseElement ')'? '('? (ConditionOperation '('? TestcaseElement')'?)* ')'?)*
 	'}'
 ;
+
+Datatype: 'int' | 'string' | 'real';
+
+Function: 'function' name=ID '(' (Datatype name=ID (',' Datatype name=ID)*)* ')';
+
+Run: 'run';
 	
