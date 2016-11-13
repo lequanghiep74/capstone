@@ -10,7 +10,11 @@ myDSL:
 	Enum | Define | Precondition | Testcase | Function | Run;
 	
 terminal DIGIT:
-    ('0'..'9')
+    ('0'..'9')*
+;
+
+terminal REAL:
+	DIGIT'.'DIGIT
 ;
 
 terminal STRING	: 
@@ -23,15 +27,17 @@ MathOperation: '+' | '-' | '*' | '/' | '^' | '%';
 
 CompareOperation: '>' | '<' | '==' | '!=' | '>=' | '<=';
 
-Variable: MyID | DIGIT;
+Variable: MyID | DIGIT | REAL;
 
-MathFormula: Variable ( MathOperation Variable)*;
+MathFormula: '('? Variable ( MathOperation Variable)* ')'?;
 
 CompareFormula: MathFormula CompareOperation MathFormula | MathFormula CompareOperation STRING;
 
 TestcaseElement: CompareFormula | MathFormula;
 
-MyID: ID | ('!')+ID;
+Method: '.'('len' | 'indexOf') '(' (STRING)* ')';
+
+MyID: (ID | ('!')ID) (Method)*;
 
 //enum
 
