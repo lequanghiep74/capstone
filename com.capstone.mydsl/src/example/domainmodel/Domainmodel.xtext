@@ -33,9 +33,7 @@ MathFormula: '('? Variable ( MathOperation Variable)* ')'?;
 
 CompareFormula: MathFormula CompareOperation MathFormula | MathFormula CompareOperation STRING;
 
-Method: '.'('len' | 'indexOf') '(' (STRING)* ')';
-
-MyID: (ID | ('!')ID) (Method)*;
+MyID: '-'?(ID | ('!')ID);
 
 TestcaseElement: CompareFormula | MathFormula;
 
