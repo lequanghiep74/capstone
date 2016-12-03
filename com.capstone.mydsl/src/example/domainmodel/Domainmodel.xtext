@@ -10,7 +10,7 @@ myDSL:
 	Enum | Define | Precondition | Testcase | Function | Run;
 	
 terminal DIGIT:
-    ('0'..'9')*
+    '-'?('0'..'9')*
 ;
 
 terminal REAL:
@@ -25,7 +25,7 @@ ConditionOperation: '||' | '&&';
 
 MathOperation: '+' | '-' | '*' | '/' | '^' | '%';
 
-CompareOperation: '>' | '<' | '==' | '!=' | '>=' | '<=';
+CompareOperation: '>' | '<' | '=' | '>=' | '<=';
 
 Variable: MyID | DIGIT | REAL;
 
@@ -33,19 +33,17 @@ MathFormula: '('? Variable ( MathOperation Variable)* ')'?;
 
 CompareFormula: MathFormula CompareOperation MathFormula | MathFormula CompareOperation STRING;
 
-TestcaseElement: CompareFormula | MathFormula;
-
 Method: '.'('len' | 'indexOf') '(' (STRING)* ')';
 
 MyID: (ID | ('!')ID) (Method)*;
 
+TestcaseElement: CompareFormula | MathFormula;
+
 //enum
 
-Enum: 'enum' name=ID '{' EnumOptions '}';
+Enum: 'enum' (ID | 'Int' | 'Real' | 'Bool') '{' EnumOptions '}';
 
-EnumElement: 'EQUI' | 'ISO' | 'SCA' | 'NOT';
-
-EnumOptions: (EnumElement (',' EnumElement)*)*;
+EnumOptions: (ID (',' ID)*)*;
 
 //define
 Define: 'define' name=ID '{'
@@ -59,14 +57,15 @@ Precondition: 'precondition' '{'
 	'}'
 ;
 
+TestCondition: STRING ('('? TestcaseElement ')'? '('? (ConditionOperation '('? TestcaseElement')'?)* ')'?)?
+;
 //test case
 Testcase : 'testcase' '{'
-		STRING '('? TestcaseElement ')'? '('?(ConditionOperation '('? TestcaseElement ')'?)* ')'?
-		| (STRING '('? TestcaseElement ')'? '('? (ConditionOperation '('? TestcaseElement')'?)* ')'?)*
+		(TestCondition)*
 	'}'
 ;
 
-Datatype: 'int' | 'string' | 'real';
+Datatype: 'Int' | 'Real' | 'Bool';
 
 Function: 'function' name=ID '(' (Datatype name=ID (',' Datatype name=ID)*)* ')';
 
