@@ -7,33 +7,63 @@ Model:
 	myDSL+=myDSL*;
 	
 myDSL:
-	Enum | Define;
+	Enum | Define | Precondition | Testcase | Function | Run;
 	
-NUMBER:
-	{IntType}
+terminal DIGIT:
+    '-'?('0'..'9')*
 ;
 
-TEXT: 
-	{StringType}
-;
-
-//enum
-
-Enum: 'enum' name=ID '{' EnumOptions '}';
-
-EnumElement: 'EQUI' | 'ISO' | 'SCA' | 'NOT';
-
-EnumOptions: (EnumElement (',' EnumElement)*)*;
-
-//pre
-
-
-//define
-
-Define: 'define' name=ID '{' '}';
+terminal REAL:
+	DIGIT'.'DIGIT
+;terminal STRING	: 
+  '"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"';
+//  "'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
 
 ConditionOperation: '||' | '&&';
 
 MathOperation: '+' | '-' | '*' | '/' | '^' | '%';
 
-CompareOperation: '>' | '<' | '==' | '!=' | '>=' | '<=';
+CompareOperation: '>' | '<' | '=' | '>=' | '<=';
+
+Variable: MyID | DIGIT | REAL;
+
+MathFormula: '('? Variable ( MathOperation Variable)* ')'?;
+
+CompareFormula: MathFormula CompareOperation MathFormula | MathFormula CompareOperation STRING;
+
+MyID: '-'?(ID | ('!')ID);
+
+TestcaseElement: CompareFormula | MathFormula;
+
+//enum
+
+Enum: 'enum' (ID | 'Int' | 'Real' | 'Bool') '{' EnumOptions '}';
+
+EnumOptions: (ID)*;
+
+//define
+Define: 'define' name=ID '{'
+		'('?(CompareFormula | MyID)')'? (ConditionOperation '('?(CompareFormula | MyID)')'?)*
+	'}'
+;
+
+//precondition
+Precondition: 'precondition' '{' 
+		CompareFormula (ConditionOperation CompareFormula)*
+	'}'
+;
+
+TestCondition: STRING ('('? TestcaseElement ')'? '('? (ConditionOperation '('? TestcaseElement')'?)* ')'?)?
+;
+//test case
+Testcase : 'testcase' '{'
+		(TestCondition)*
+	'}'
+;
+
+Datatype: 'Int' | 'Real' | 'Bool';
+
+Function: 'function' name=ID '(' (Datatype name=ID (',' Datatype name=ID)*)* ')';
+
+Run: 'run';
+	

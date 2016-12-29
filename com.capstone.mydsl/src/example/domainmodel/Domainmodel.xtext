@@ -15,11 +15,9 @@ terminal DIGIT:
 
 terminal REAL:
 	DIGIT'.'DIGIT
-;
-
-terminal STRING	: 
-  '"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
-  "'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
+;terminal STRING	: 
+  '"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"';
+//  "'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
 
 ConditionOperation: '||' | '&&';
 
@@ -41,7 +39,7 @@ TestcaseElement: CompareFormula | MathFormula;
 
 Enum: 'enum' (ID | 'Int' | 'Real' | 'Bool') '{' EnumOptions '}';
 
-EnumOptions: (ID (',' ID)*)*;
+EnumOptions: (ID)*;
 
 //define
 Define: 'define' name=ID '{'
