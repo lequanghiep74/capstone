@@ -7,7 +7,7 @@ Model:
 	myDSL+=myDSL*;
 	
 myDSL:
-	Enum | Define | Precondition | Testcase | Function | Run;
+	Enum | Define | Precondition | Testcase | Function | Run | StrRegex | StrDef;
 	
 terminal DIGIT:
     '-'?('0'..'9')*
@@ -15,9 +15,14 @@ terminal DIGIT:
 
 terminal REAL:
 	DIGIT'.'DIGIT
-;terminal STRING	: 
+;
+
+terminal STRING	: 
   '"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"';
 //  "'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
+
+terminal STRINGWOD : 
+  ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )*;
 
 ConditionOperation: '||' | '&&';
 
@@ -37,13 +42,22 @@ TestcaseElement: CompareFormula | MathFormula;
 
 //enum
 
-Enum: 'enum' (ID | 'Int' | 'Real' | 'Bool') '{' EnumOptions '}';
+Enum: 'enum' (ID | 'Int' | 'Real' | 'Bool' | 'String') '{' EnumOptions '}';
 
 EnumOptions: (ID)*;
 
 //define
 Define: 'define' name=ID '{'
 		'('?(CompareFormula | MyID)')'? (ConditionOperation '('?(CompareFormula | MyID)')'?)*
+	'}'
+;
+
+//str-regex
+StrRegex: 'str-regex' name=ID STRINGWOD;
+
+//str-def
+StrDef: 'str-def' name=ID '{'
+		CompareFormula
 	'}'
 ;
 
@@ -61,7 +75,7 @@ Testcase : 'testcase' '{'
 	'}'
 ;
 
-Datatype: 'Int' | 'Real' | 'Bool';
+Datatype: 'Int' | 'Real' | 'Bool' | 'String';
 
 Function: 'function' name=ID '(' (Datatype name=ID (',' Datatype name=ID)*)* ')';
 
