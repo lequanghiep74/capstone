@@ -15,8 +15,8 @@ import org.junit.runner.RunWith;
 import org.xtext.example.domainmodel.domainmodel.Model;
 import org.xtext.example.domainmodel.tests.DomainmodelInjectorProvider;
 
-@RunWith(XtextRunner.class)
-@InjectWith(DomainmodelInjectorProvider.class)
+@RunWith(XtextRunner.class)/* 
+@InjectWith(DomainmodelInjectorProvider.class) */
 @SuppressWarnings("all")
 public class DomainmodelParsingTest {
   @Inject

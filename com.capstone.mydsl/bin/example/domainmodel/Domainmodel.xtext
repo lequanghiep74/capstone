@@ -7,7 +7,7 @@ Model:
 	myDSL+=myDSL*;
 	
 myDSL:
-	Enum | Define | Precondition | Testcase | Function | Run | StrRegex | StrDef;
+	Enum | Define | Precondition | Testcase | Function | Run;
 	
 terminal DIGIT:
     '-'?('0'..'9')*
@@ -20,9 +20,6 @@ terminal REAL:
 terminal STRING	: 
   '"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"';
 //  "'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
-
-terminal STRINGWOD : 
-  ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )*;
 
 ConditionOperation: '||' | '&&';
 
@@ -49,15 +46,6 @@ EnumOptions: (ID)*;
 //define
 Define: 'define' name=ID '{'
 		'('?(CompareFormula | MyID)')'? (ConditionOperation '('?(CompareFormula | MyID)')'?)*
-	'}'
-;
-
-//str-regex
-StrRegex: 'str-regex' name=ID STRINGWOD;
-
-//str-def
-StrDef: 'str-def' name=ID '{'
-		CompareFormula
 	'}'
 ;
 
