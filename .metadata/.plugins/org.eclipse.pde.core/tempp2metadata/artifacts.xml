@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='file:/C:/Users/lequanghiep/workspace/capstone/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1480609579189'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='12'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xbase.source' version='2.10.0.v201605250459'>
+      <properties size='3'>
+        <property name='artifact.size' value='2698795'/>
+        <property name='download.size' value='2698795'/>
+        <property name='download.md5' value='c1b3142830c70c530f92b20173702665'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.capstone.mydsl' version='1.0.0.201612012326'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='121322'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xtext.wizard' version='2.10.0.v201605250459'>
+      <properties size='3'>
+        <property name='artifact.size' value='582315'/>
+        <property name='download.size' value='582315'/>
+        <property name='download.md5' value='f5568f7142f9099e5676ad76acc7593e'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xtext.ui.source' version='2.10.0.v201605250459'>
+      <properties size='3'>
+        <property name='artifact.size' value='273521'/>
+        <property name='download.size' value='273521'/>
+        <property name='download.md5' value='b26a0593c31451e81b292857932be630'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xtext.generator' version='2.10.0.v201605250459'>
+      <properties size='3'>
+        <property name='artifact.size' value='1627310'/>
+        <property name='download.size' value='1627310'/>
+        <property name='download.md5' value='3300a878380a88883817277aed67c17d'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.capstone.mydsk.feature' version='1.0.0.201612012326'>
+      <properties size='2'>
+        <property name='download.contentType' value='application/zip'/>
+        <property name='download.size' value='500'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xbase.ui' version='2.10.0.v201605250459'>
+      <properties size='3'>
+        <property name='artifact.size' value='576292'/>
+        <property name='download.size' value='576292'/>
+        <property name='download.md5' value='0377d6380a3a55af07388ebc74f12067'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xbase.ui.source' version='2.10.0.v201605250459'>
+      <properties size='3'>
+        <property name='artifact.size' value='419120'/>
+        <property name='download.size' value='419120'/>
+        <property name='download.md5' value='9f4333c80c5e2516b354f29213f84d95'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.capstone.mydsl.ide' version='1.0.0.201612012326'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='55377'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.capstone.mydsl.ui' version='1.0.0.201612012326'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='33185'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xtext.ui' version='2.10.0.v201605250459'>
+      <properties size='3'>
+        <property name='artifact.size' value='413818'/>
+        <property name='download.size' value='413818'/>
+        <property name='download.md5' value='fd07e0da409e6c92f8f860b0335db9e0'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xtext.wizard.source' version='2.10.0.v201605250459'>
+      <properties size='3'>
+        <property name='artifact.size' value='422903'/>
+        <property name='download.size' value='422903'/>
+        <property name='download.md5' value='9cf344f52b76f9887a885ee8e0a140e9'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

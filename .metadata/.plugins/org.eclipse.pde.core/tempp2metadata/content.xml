@@ -1,0 +1,567 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.1.0'?>
+<repository name='file:/C:/Users/lequanghiep/workspace/capstone/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1480609579194'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <units size='13'>
+    <unit id='com.capstone.mydsl.ide' version='1.0.0.201612012326'>
+      <update id='com.capstone.mydsl.ide' range='[0.0.0,1.0.0.201612012326)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='com.capstone.mydsl.ide'/>
+        <property name='org.eclipse.equinox.p2.provider' value='My Company'/>
+      </properties>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.capstone.mydsl.ide' version='1.0.0.201612012326'/>
+        <provided namespace='osgi.bundle' name='com.capstone.mydsl.ide' version='1.0.0.201612012326'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.ide.contentassist.antlr.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.ide.contentassist.antlr' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='com.capstone.mydsl' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.ide' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.capstone.mydsl.ide' version='1.0.0.201612012326'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: com.capstone.mydsl.ide; singleton:=true&#xA;Bundle-Version: 1.0.0.201612012326
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.xtext.xtext.wizard.source' version='2.10.0.v201605250459' singleton='false'>
+      <update id='org.eclipse.xtext.xtext.wizard.source' range='[0.0.0,2.10.0.v201605250459)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xtext Wizard Source'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Eclipse Xtext'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xtext.wizard.source' version='2.10.0.v201605250459'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.xtext.xtext.wizard.source' version='2.10.0.v201605250459'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='source' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xtext.wizard.source' version='2.10.0.v201605250459'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.xtext.xtext.wizard.source&#xA;Bundle-Version: 2.10.0.v201605250459&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.capstone.mydsk.feature.feature.group' version='1.0.0.201612012326' singleton='false'>
+      <update id='com.capstone.mydsk.feature.feature.group' range='[0.0.0,1.0.0.201612012326)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='Feature'/>
+        <property name='org.eclipse.equinox.p2.description' value='[Enter Feature Description here.]'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.example.com/description'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.capstone.mydsk.feature.feature.group' version='1.0.0.201612012326'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.capstone.mydsl' range='[1.0.0.201612012326,1.0.0.201612012326]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.capstone.mydsl.ide' range='[1.0.0.201612012326,1.0.0.201612012326]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.capstone.mydsl.ui' range='[1.0.0.201612012326,1.0.0.201612012326]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xbase.source' range='[2.10.0.v201605250459,2.10.0.v201605250459]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xbase.ui' range='[2.10.0.v201605250459,2.10.0.v201605250459]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xbase.ui.source' range='[2.10.0.v201605250459,2.10.0.v201605250459]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xtext.generator' range='[2.10.0.v201605250459,2.10.0.v201605250459]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xtext.ui' range='[2.10.0.v201605250459,2.10.0.v201605250459]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xtext.ui.source' range='[2.10.0.v201605250459,2.10.0.v201605250459]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xtext.wizard' range='[2.10.0.v201605250459,2.10.0.v201605250459]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xtext.wizard.source' range='[2.10.0.v201605250459,2.10.0.v201605250459]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.capstone.mydsk.feature.feature.jar' range='[1.0.0.201612012326,1.0.0.201612012326]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='http://www.example.com/license' url='http://www.example.com/license'>
+          [Enter License Description here.]
+        </license>
+      </licenses>
+      <copyright uri='http://www.example.com/copyright' url='http://www.example.com/copyright'>
+        [Enter Copyright Description here.]
+      </copyright>
+    </unit>
+    <unit id='com.capstone.mydsl.ui' version='1.0.0.201612012326'>
+      <update id='com.capstone.mydsl.ui' range='[0.0.0,1.0.0.201612012326)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='com.capstone.mydsl.ui'/>
+        <property name='org.eclipse.equinox.p2.provider' value='My Company'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.capstone.mydsl.ui' version='1.0.0.201612012326'/>
+        <provided namespace='osgi.bundle' name='com.capstone.mydsl.ui' version='1.0.0.201612012326'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.ui.quickfix' version='0.0.0'/>
+        <provided namespace='java.package' name='com.capstone.mydsl.ui.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.ui.contentassist' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='13'>
+        <required namespace='osgi.bundle' name='com.capstone.mydsl' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.capstone.mydsl.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.shared' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.codetemplates.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='3.5.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='3.5.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.builder' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtend.lib' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.log4j' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.capstone.mydsl.ui' version='1.0.0.201612012326'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: com.capstone.mydsl.ui; singleton:=true&#xA;Bundle-Version: 1.0.0.201612012326
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.xtext.xtext.ui.source' version='2.10.0.v201605250459' singleton='false'>
+      <update id='org.eclipse.xtext.xtext.ui.source' range='[0.0.0,2.10.0.v201605250459)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xtext Xtext UI  Source'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Eclipse Xtext'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xtext.ui.source' version='2.10.0.v201605250459'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.xtext.xtext.ui.source' version='2.10.0.v201605250459'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='source' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xtext.ui.source' version='2.10.0.v201605250459'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.xtext.xtext.ui.source&#xA;Bundle-Version: 2.10.0.v201605250459&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.xtext.xbase.ui' version='2.10.0.v201605250459'>
+      <update id='org.eclipse.xtext.xbase.ui' range='[0.0.0,2.10.0.v201605250459)' severity='0'/>
+      <properties size='5'>
+        <property name='df_LT.pluginName' value='Xbase UI '/>
+        <property name='df_LT.providerName' value='Eclipse Xtext'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='38'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xbase.ui' version='2.10.0.v201605250459'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.xtext.xbase.ui' version='2.10.0.v201605250459'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.ui' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.ui.contentassist' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.ui.labeling' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.ui.outline' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.annotations.ui.quickfix' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.builder' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.contentassist' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.debug' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.document' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.editor' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.editor.actions' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.editor.copyqualifiedname' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.generator.trace' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.hierarchy' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.highlighting' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.hover' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.imports' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.jvmmodel.findrefs' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.jvmmodel.navigation' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.jvmmodel.occurrence' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.jvmmodel.outline' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.jvmmodel.refactoring' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.jvmmodel.refactoring.jdt' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.labeling' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.launching' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.navigation' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.outline' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.quickfix' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.refactoring' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.syntaxcoloring' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.templates' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xbase.ui.validation' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='27'>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.builder' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.common.types.ui' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.shared' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.antlr.runtime' range='[3.2.0,3.2.1)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='3.6.0' optional='true'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='3.6.0' optional='true'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core.manipulation' range='1.3.0' optional='true'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.codetemplates.ui' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.junit' range='3.6.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.debug.ui' range='3.5.2' optional='true'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='3.6.0' optional='true'/>
+        <required namespace='osgi.bundle' name='org.eclipse.pde.ui' range='3.6.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.search' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ltk.ui.refactoring' range='3.4.0' optional='true'/>
+        <required namespace='osgi.bundle' name='org.apache.commons.lang' range='2.1.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='1.2.1'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.debug' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.expressions' range='3.4.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.ide' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtend.lib' range='[2.10.0,3.0.0)'/>
+        <required namespace='java.package' name='org.apache.log4j' range='1.2.15'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xbase.ui' version='2.10.0.v201605250459'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.xtext.xbase.ui; singleton:=true&#xA;Bundle-Version: 2.10.0.v201605250459&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.xtext.xbase.source' version='2.10.0.v201605250459' singleton='false'>
+      <update id='org.eclipse.xtext.xbase.source' range='[0.0.0,2.10.0.v201605250459)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xbase Model  Source'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Eclipse Xtext'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xbase.source' version='2.10.0.v201605250459'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.xtext.xbase.source' version='2.10.0.v201605250459'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='source' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xbase.source' version='2.10.0.v201605250459'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.xtext.xbase.source&#xA;Bundle-Version: 2.10.0.v201605250459&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.xtext.xtext.generator' version='2.10.0.v201605250459'>
+      <update id='org.eclipse.xtext.xtext.generator' range='[0.0.0,2.10.0.v201605250459)' severity='0'/>
+      <properties size='5'>
+        <property name='df_LT.pluginName' value='Xtext Generator 2 '/>
+        <property name='df_LT.providerName' value='Eclipse Xtext'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='40'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xtext.generator' version='2.10.0.v201605250459'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.xtext.xtext.generator' version='2.10.0.v201605250459'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.builder' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.ecore' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.ecore2xtext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.exporting' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.formatting' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.generator' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.grammarAccess' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.idea' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.idea.parser.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.model' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.model.project' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.parser.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.parser.antlr.splitting' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.parser.antlr.splitting.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.parser.antlr.splitting.parser.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.parser.antlr.splitting.parser.antlr.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.parser.antlr.splitting.services' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.parser.antlr.splitting.simpleExpressions' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.parser.antlr.splitting.simpleExpressions.impl' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.parser.antlr.splitting.simpleExpressions.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.resourceFactory' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.scoping' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.serializer' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.types' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.ui.compare' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.ui.contentAssist' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.ui.labeling' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.ui.outline' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.ui.quickfix' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.ui.refactoring' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.ui.templates' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.web' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.generator.xbase' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='15'>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.util' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtend.lib' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ecore' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.codegen.ecore' range='2.10.2'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='2.10.2'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.common' range='2.10.1'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.mwe2.lib' range='2.7.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.antlr.runtime' range='[3.2.0,3.2.1)'/>
+        <required namespace='osgi.bundle' name='de.itemis.xtext.antlr' range='2.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='3.6.0' optional='true' greedy='false'/>
+        <required namespace='java.package' name='com.ibm.icu.text' range='4.0.0'/>
+        <required namespace='java.package' name='org.apache.log4j' range='1.2.15'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xtext.generator' version='2.10.0.v201605250459'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.xtext.xtext.generator;singleton:=true&#xA;Bundle-Version: 2.10.0.v201605250459&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.xtext.xbase.ui.source' version='2.10.0.v201605250459' singleton='false'>
+      <update id='org.eclipse.xtext.xbase.ui.source' range='[0.0.0,2.10.0.v201605250459)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xbase UI  Source'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Eclipse Xtext'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xbase.ui.source' version='2.10.0.v201605250459'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.xtext.xbase.ui.source' version='2.10.0.v201605250459'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='source' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xbase.ui.source' version='2.10.0.v201605250459'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.xtext.xbase.ui.source&#xA;Bundle-Version: 2.10.0.v201605250459&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.capstone.mydsk.feature.feature.jar' version='1.0.0.201612012326'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Feature'/>
+        <property name='org.eclipse.equinox.p2.description' value='[Enter Feature Description here.]'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.example.com/description'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.capstone.mydsk.feature.feature.jar' version='1.0.0.201612012326'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='com.capstone.mydsk.feature' version='1.0.0.201612012326'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='com.capstone.mydsk.feature' version='1.0.0.201612012326'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='http://www.example.com/license' url='http://www.example.com/license'>
+          [Enter License Description here.]
+        </license>
+      </licenses>
+      <copyright uri='http://www.example.com/copyright' url='http://www.example.com/copyright'>
+        [Enter Copyright Description here.]
+      </copyright>
+    </unit>
+    <unit id='org.eclipse.xtext.xtext.wizard' version='2.10.0.v201605250459' singleton='false'>
+      <update id='org.eclipse.xtext.xtext.wizard' range='[0.0.0,2.10.0.v201605250459)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xtext Wizard'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Eclipse Xtext'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xtext.wizard' version='2.10.0.v201605250459'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.xtext.xtext.wizard' version='2.10.0.v201605250459'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.wizard' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.wizard.cli' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.wizard.ecore2xtext' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtend.lib' range='[2.10.0,3.0.0)' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.util' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='2.10.2'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xtext.wizard' version='2.10.0.v201605250459'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.xtext.xtext.wizard&#xA;Bundle-Version: 2.10.0.v201605250459&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.xtext.xtext.ui' version='2.10.0.v201605250459'>
+      <update id='org.eclipse.xtext.xtext.ui' range='[0.0.0,2.10.0.v201605250459)' severity='0'/>
+      <properties size='5'>
+        <property name='df_LT.pluginName' value='Xtext Xtext UI '/>
+        <property name='df_LT.providerName' value='Eclipse Xtext'/>
+        <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='20'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.xtext.xtext.ui' version='2.10.0.v201605250459'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.xtext.xtext.ui' version='2.10.0.v201605250459'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.ui.contentassist' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.ui.contentassist.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.ui.contentassist.antlr.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.ui.editor.hierarchy' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.ecoreInference' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.launcher' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.ui' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.ui.editor.autoedit' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.ui.editor.folding' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.ui.editor.outline' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.ui.editor.quickfix' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.ui.editor.syntaxcoloring' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.ui.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.ui.refactoring' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.ui.wizard.ecore2xtext' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipse.xtext.xtext.ui.wizard.project' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='28'>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help' range='3.5.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.codegen.ecore' range='2.10.2'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.expressions' range='3.4.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.shared' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.mwe2.language' range='2.2.0' optional='true'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.mwe2.launch' range='2.2.0' optional='true'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.mwe2.launch.ui' range='2.2.0' optional='true'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.mwe2.language.ui' range='2.2.0' optional='true'/>
+        <required namespace='osgi.bundle' name='org.eclipse.pde.ui' range='3.6.0' optional='true'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.builder' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.antlr.runtime' range='[3.2.0,3.2.1)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.compare' range='3.5.101'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.codetemplates.ui' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.databinding' range='1.3.1'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.databinding' range='1.2.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.databinding.beans' range='1.2.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.databinding.property' range='1.2.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtend.lib' range='[2.10.0,3.0.0)' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xtext.wizard' range='[2.10.0,3.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='3.5.0'/>
+        <required namespace='java.package' name='org.apache.log4j' range='1.2.15'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipse.xtext.xtext.ui' version='2.10.0.v201605250459'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.xtext.xtext.ui;singleton:=true&#xA;Bundle-Version: 2.10.0.v201605250459&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.capstone.mydsl' version='1.0.0.201612012326'>
+      <update id='com.capstone.mydsl' range='[0.0.0,1.0.0.201612012326)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='com.capstone.mydsl'/>
+        <property name='org.eclipse.equinox.p2.provider' value='My Company'/>
+      </properties>
+      <provides size='14'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.capstone.mydsl' version='1.0.0.201612012326'/>
+        <provided namespace='osgi.bundle' name='com.capstone.mydsl' version='1.0.0.201612012326'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.parser.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.domainmodel' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.generator' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.parser.antlr.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.services' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.domainmodel.util' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.serializer' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.validation' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.scoping' version='0.0.0'/>
+        <provided namespace='java.package' name='org.xtext.example.domainmodel.domainmodel.impl' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='10'>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.common' range='3.5.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.antlr.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.util' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtend.lib' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.emf.common' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.log4j' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.capstone.mydsl' version='1.0.0.201612012326'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: com.capstone.mydsl; singleton:=true&#xA;Bundle-Version: 1.0.0.201612012326
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

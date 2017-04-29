@@ -1,0 +1,789 @@
+!SESSION 2016-11-21 20:18:24.022 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.capstone.mydsl.product.product
+Command-line arguments:  -product com.capstone.mydsl.product.product -data C:\Users\lequanghiep\workspace\capstone/../runtime-MyDSL.product -dev file:C:/Users/lequanghiep/workspace/capstone/.metadata/.plugins/org.eclipse.pde.core/MyDSL.product/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.ecf.provider.filetransfer 4 0 2016-11-21 20:18:24.877
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.provider.filetransfer [3]
+  Unresolved requirement: Import-Package: org.eclipse.core.net.proxy; resolution:="optional"
+  Unresolved requirement: Import-Package: org.eclipse.core.runtime.jobs
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.emf.edit.ui 4 0 2016-11-21 20:18:24.885
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.emf.edit.ui [4]
+  Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="[3.5.0,4.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.emf.common.ui 4 0 2016-11-21 20:18:24.898
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.emf.common.ui [5]
+  Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="[3.5.0,4.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.capstone.mydsl.product 4 0 2016-11-21 20:18:24.904
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.capstone.mydsl.product [6]
+  Unresolved requirement: Require-Bundle: org.eclipse.ui
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.capstone.mydsl 4 0 2016-11-21 20:18:24.909
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.capstone.mydsl [7]
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext
+    -> Bundle-SymbolicName: org.eclipse.xtext; bundle-version="2.10.0.v201605250459"; singleton:="true"
+       org.eclipse.xtext [12]
+         Unresolved requirement: Require-Bundle: org.objectweb.asm; bundle-version="[5.0.1,6.0.0)"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"; visibility:="reexport"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend.typesystem.emf; bundle-version="1.0.1"; x-installation:="greedy"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.xtend.typesystem.emf; bundle-version="2.2.0.v201605260315"; singleton:="true"
+              org.eclipse.xtend.typesystem.emf [35]
+                Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+                  -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+                     org.eclipse.emf.mwe.utils [2]
+                       Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+                         -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                            org.eclipse.emf.mwe.core [27]
+                              Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+         Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"; visibility:="reexport"
+           -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+              com.google.inject [23]
+                Unresolved requirement: Import-Package: javax.inject
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.utils; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.emf.mwe.utils; bundle-version="1.3.20.v201605261103"
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend; bundle-version="1.1.0"; x-installation:="greedy"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+              org.eclipse.xtend [30]
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.ui.views.log 4 0 2016-11-21 20:18:24.916
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ui.views.log [10]
+  Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="[3.2.0,4.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.xtext 4 0 2016-11-21 20:18:24.921
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.xtext [12]
+  Unresolved requirement: Require-Bundle: org.objectweb.asm; bundle-version="[5.0.1,6.0.0)"; resolution:="optional"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"; visibility:="reexport"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtend.typesystem.emf; bundle-version="1.0.1"; x-installation:="greedy"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.xtend.typesystem.emf; bundle-version="2.2.0.v201605260315"; singleton:="true"
+       org.eclipse.xtend.typesystem.emf [35]
+         Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+           -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+              org.eclipse.emf.mwe.utils [2]
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                     org.eclipse.emf.mwe.core [27]
+                       Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+  Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"; visibility:="reexport"
+    -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+       com.google.inject [23]
+         Unresolved requirement: Import-Package: javax.inject
+  Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.utils; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.emf.mwe.utils; bundle-version="1.3.20.v201605261103"
+  Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtend; bundle-version="1.1.0"; x-installation:="greedy"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+       org.eclipse.xtend [30]
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.xsd 4 0 2016-11-21 20:18:24.928
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.xsd [16]
+  Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="[3.5.0,4.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.capstone.mydsl.ide 4 0 2016-11-21 20:18:24.933
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.capstone.mydsl.ide [17]
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.ide
+  Unresolved requirement: Require-Bundle: com.capstone.mydsl
+    -> Bundle-SymbolicName: com.capstone.mydsl; bundle-version="1.0.0.qualifier"; singleton:="true"
+       com.capstone.mydsl [7]
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext
+           -> Bundle-SymbolicName: org.eclipse.xtext; bundle-version="2.10.0.v201605250459"; singleton:="true"
+              org.eclipse.xtext [12]
+                Unresolved requirement: Require-Bundle: org.objectweb.asm; bundle-version="[5.0.1,6.0.0)"; resolution:="optional"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"; visibility:="reexport"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend.typesystem.emf; bundle-version="1.0.1"; x-installation:="greedy"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.xtend.typesystem.emf; bundle-version="2.2.0.v201605260315"; singleton:="true"
+                     org.eclipse.xtend.typesystem.emf [35]
+                       Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+                         -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+                            org.eclipse.emf.mwe.utils [2]
+                              Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+                                -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                                   org.eclipse.emf.mwe.core [27]
+                                     Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+                Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"; visibility:="reexport"
+                  -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+                     com.google.inject [23]
+                       Unresolved requirement: Import-Package: javax.inject
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.utils; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.utils; bundle-version="1.3.20.v201605261103"
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend; bundle-version="1.1.0"; x-installation:="greedy"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+                     org.eclipse.xtend [30]
+                       Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+                         -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.capstone.mydsl.ui 4 0 2016-11-21 20:18:24.940
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.capstone.mydsl.ui [18]
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.ui.codetemplates.ui
+  Unresolved requirement: Require-Bundle: com.capstone.mydsl
+    -> Bundle-SymbolicName: com.capstone.mydsl; bundle-version="1.0.0.qualifier"; singleton:="true"
+       com.capstone.mydsl [7]
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext
+           -> Bundle-SymbolicName: org.eclipse.xtext; bundle-version="2.10.0.v201605250459"; singleton:="true"
+              org.eclipse.xtext [12]
+                Unresolved requirement: Require-Bundle: org.objectweb.asm; bundle-version="[5.0.1,6.0.0)"; resolution:="optional"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"; visibility:="reexport"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend.typesystem.emf; bundle-version="1.0.1"; x-installation:="greedy"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.xtend.typesystem.emf; bundle-version="2.2.0.v201605260315"; singleton:="true"
+                     org.eclipse.xtend.typesystem.emf [35]
+                       Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+                         -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+                            org.eclipse.emf.mwe.utils [2]
+                              Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+                                -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                                   org.eclipse.emf.mwe.core [27]
+                                     Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+                Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"; visibility:="reexport"
+                  -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+                     com.google.inject [23]
+                       Unresolved requirement: Import-Package: javax.inject
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.utils; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.utils; bundle-version="1.3.20.v201605261103"
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend; bundle-version="1.1.0"; x-installation:="greedy"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+                     org.eclipse.xtend [30]
+                       Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+                         -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.ui.shared
+    -> Bundle-SymbolicName: org.eclipse.xtext.ui.shared; bundle-version="2.10.0.v201605250459"; singleton:="true"
+       org.eclipse.xtext.ui.shared [28]
+         Unresolved requirement: Require-Bundle: org.eclipse.jdt.core; bundle-version="3.6.0"; x-installation:="greedy"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.jdt.ui; bundle-version="3.6.0"; x-installation:="greedy"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.common.types.ui; bundle-version="[2.10.0,3.0.0)"; x-installation:="greedy"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.ui.ide; bundle-version="[3.8.0,4.0.0)"; x-installation:="greedy"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.core.expressions; bundle-version="[3.4.0,4.0.0)"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.ui; bundle-version="[2.10.0,3.0.0)"; x-installation:="greedy"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.xtext.ui; bundle-version="2.10.0.v201605250459"; singleton:="true"
+              org.eclipse.xtext.ui [22]
+                Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="3.4.0"; visibility:="reexport"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.builder; bundle-version="[2.10.0,3.0.0)"; x-installation:="greedy"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.xtext.builder; bundle-version="2.10.0.v201605250459"; singleton:="true"
+              org.eclipse.xtext.builder [29]
+                Unresolved requirement: Require-Bundle: org.eclipse.xtext; bundle-version="[2.10.0,3.0.0)"
+                  -> Bundle-SymbolicName: org.eclipse.xtext; bundle-version="2.10.0.v201605250459"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.ui
+    -> Bundle-SymbolicName: org.eclipse.xtext.ui; bundle-version="2.10.0.v201605250459"; singleton:="true"
+  Unresolved requirement: Require-Bundle: com.capstone.mydsl.ide
+    -> Bundle-SymbolicName: com.capstone.mydsl.ide; bundle-version="1.0.0.qualifier"; singleton:="true"
+       com.capstone.mydsl.ide [17]
+         Unresolved requirement: Require-Bundle: com.capstone.mydsl
+           -> Bundle-SymbolicName: com.capstone.mydsl; bundle-version="1.0.0.qualifier"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.xtext.ui 4 0 2016-11-21 20:18:24.944
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.xtext.ui [22]
+  Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="3.4.0"; visibility:="reexport"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.emf.mwe.core 4 0 2016-11-21 20:18:24.949
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.emf.mwe.core [27]
+  Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.xtext.ui.shared 4 0 2016-11-21 20:18:24.954
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.xtext.ui.shared [28]
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.core; bundle-version="3.6.0"; x-installation:="greedy"; resolution:="optional"
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.ui; bundle-version="3.6.0"; x-installation:="greedy"; resolution:="optional"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.common.types.ui; bundle-version="[2.10.0,3.0.0)"; x-installation:="greedy"; resolution:="optional"
+  Unresolved requirement: Require-Bundle: org.eclipse.ui.ide; bundle-version="[3.8.0,4.0.0)"; x-installation:="greedy"; resolution:="optional"
+  Unresolved requirement: Require-Bundle: org.eclipse.core.expressions; bundle-version="[3.4.0,4.0.0)"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.ui; bundle-version="[2.10.0,3.0.0)"; x-installation:="greedy"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.xtext.ui; bundle-version="2.10.0.v201605250459"; singleton:="true"
+       org.eclipse.xtext.ui [22]
+         Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="3.4.0"; visibility:="reexport"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.builder; bundle-version="[2.10.0,3.0.0)"; x-installation:="greedy"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.xtext.builder; bundle-version="2.10.0.v201605250459"; singleton:="true"
+       org.eclipse.xtext.builder [29]
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext; bundle-version="[2.10.0,3.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.xtext; bundle-version="2.10.0.v201605250459"; singleton:="true"
+              org.eclipse.xtext [12]
+                Unresolved requirement: Require-Bundle: org.objectweb.asm; bundle-version="[5.0.1,6.0.0)"; resolution:="optional"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"; visibility:="reexport"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend.typesystem.emf; bundle-version="1.0.1"; x-installation:="greedy"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.xtend.typesystem.emf; bundle-version="2.2.0.v201605260315"; singleton:="true"
+                     org.eclipse.xtend.typesystem.emf [35]
+                       Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+                         -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+                            org.eclipse.emf.mwe.utils [2]
+                              Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+                                -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                                   org.eclipse.emf.mwe.core [27]
+                                     Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+                Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"; visibility:="reexport"
+                  -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+                     com.google.inject [23]
+                       Unresolved requirement: Import-Package: javax.inject
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.utils; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.utils; bundle-version="1.3.20.v201605261103"
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend; bundle-version="1.1.0"; x-installation:="greedy"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+                     org.eclipse.xtend [30]
+                       Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+                         -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.xtext.builder 4 0 2016-11-21 20:18:24.959
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.xtext.builder [29]
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext; bundle-version="[2.10.0,3.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.xtext; bundle-version="2.10.0.v201605250459"; singleton:="true"
+       org.eclipse.xtext [12]
+         Unresolved requirement: Require-Bundle: org.objectweb.asm; bundle-version="[5.0.1,6.0.0)"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"; visibility:="reexport"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend.typesystem.emf; bundle-version="1.0.1"; x-installation:="greedy"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.xtend.typesystem.emf; bundle-version="2.2.0.v201605260315"; singleton:="true"
+              org.eclipse.xtend.typesystem.emf [35]
+                Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+                  -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+                     org.eclipse.emf.mwe.utils [2]
+                       Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+                         -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                            org.eclipse.emf.mwe.core [27]
+                              Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+         Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"; visibility:="reexport"
+           -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+              com.google.inject [23]
+                Unresolved requirement: Import-Package: javax.inject
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.utils; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.emf.mwe.utils; bundle-version="1.3.20.v201605261103"
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend; bundle-version="1.1.0"; x-installation:="greedy"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+              org.eclipse.xtend [30]
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.ui.console 4 0 2016-11-21 20:18:24.964
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ui.console [33]
+  Unresolved requirement: Require-Bundle: org.eclipse.ui; bundle-version="[3.5.0,4.0.0)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:444)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1620)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1599)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1571)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1514)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.capstone.mydsl.ui 2 0 2016-11-21 20:18:24.997
+!MESSAGE Could not resolve module: com.capstone.mydsl.ui [18]
+  Unresolved requirement: Require-Bundle: com.capstone.mydsl
+    -> Bundle-SymbolicName: com.capstone.mydsl; bundle-version="1.0.0.qualifier"; singleton:="true"
+       com.capstone.mydsl [7]
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext
+           -> Bundle-SymbolicName: org.eclipse.xtext; bundle-version="2.10.0.v201605250459"; singleton:="true"
+              org.eclipse.xtext [12]
+                Unresolved requirement: Require-Bundle: org.objectweb.asm; bundle-version="[5.0.1,6.0.0)"; resolution:="optional"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"; visibility:="reexport"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend.typesystem.emf; bundle-version="1.0.1"; x-installation:="greedy"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.xtend.typesystem.emf; bundle-version="2.2.0.v201605260315"; singleton:="true"
+                     org.eclipse.xtend.typesystem.emf [35]
+                       Unresolved requirement: Require-Bundle: org.eclipse.xtend
+                         -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+                            org.eclipse.xtend [30]
+                              Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+                                -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                                   org.eclipse.emf.mwe.core [27]
+                                     Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+                       Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+                         -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+                            org.eclipse.emf.mwe.utils [2]
+                              Unresolved requirement: Require-Bundle: org.eclipse.emf.codegen.ecore; x-installation:="greedy"; resolution:="optional"
+                              Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+                                -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"; visibility:="reexport"
+                  -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+                     com.google.inject [23]
+                       Unresolved requirement: Import-Package: javax.inject
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.utils; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.utils; bundle-version="1.3.20.v201605261103"
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend; bundle-version="1.1.0"; x-installation:="greedy"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+
+
+!ENTRY org.eclipse.xtext.builder 2 0 2016-11-21 20:18:25.008
+!MESSAGE Could not resolve module: org.eclipse.xtext.builder [29]
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext; bundle-version="[2.10.0,3.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.xtext; bundle-version="2.10.0.v201605250459"; singleton:="true"
+       org.eclipse.xtext [12]
+         Unresolved requirement: Require-Bundle: org.objectweb.asm; bundle-version="[5.0.1,6.0.0)"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"; visibility:="reexport"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend.typesystem.emf; bundle-version="1.0.1"; x-installation:="greedy"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.xtend.typesystem.emf; bundle-version="2.2.0.v201605260315"; singleton:="true"
+              org.eclipse.xtend.typesystem.emf [35]
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend
+                  -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+                     org.eclipse.xtend [30]
+                       Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+                         -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                            org.eclipse.emf.mwe.core [27]
+                              Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+                Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+                  -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+                     org.eclipse.emf.mwe.utils [2]
+                       Unresolved requirement: Require-Bundle: org.eclipse.emf.codegen.ecore; x-installation:="greedy"; resolution:="optional"
+                       Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+                         -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+         Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"; visibility:="reexport"
+           -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+              com.google.inject [23]
+                Unresolved requirement: Import-Package: javax.inject
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.utils; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.emf.mwe.utils; bundle-version="1.3.20.v201605261103"
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend; bundle-version="1.1.0"; x-installation:="greedy"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+
+
+!ENTRY com.google.inject 2 0 2016-11-21 20:18:25.017
+!MESSAGE Could not resolve module: com.google.inject [23]
+  Unresolved requirement: Import-Package: javax.inject
+
+
+!ENTRY com.capstone.mydsl 2 0 2016-11-21 20:18:25.024
+!MESSAGE Could not resolve module: com.capstone.mydsl [7]
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext
+    -> Bundle-SymbolicName: org.eclipse.xtext; bundle-version="2.10.0.v201605250459"; singleton:="true"
+       org.eclipse.xtext [12]
+         Unresolved requirement: Require-Bundle: org.objectweb.asm; bundle-version="[5.0.1,6.0.0)"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"; visibility:="reexport"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend.typesystem.emf; bundle-version="1.0.1"; x-installation:="greedy"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.xtend.typesystem.emf; bundle-version="2.2.0.v201605260315"; singleton:="true"
+              org.eclipse.xtend.typesystem.emf [35]
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend
+                  -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+                     org.eclipse.xtend [30]
+                       Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+                         -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                            org.eclipse.emf.mwe.core [27]
+                              Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+                Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+                  -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+                     org.eclipse.emf.mwe.utils [2]
+                       Unresolved requirement: Require-Bundle: org.eclipse.emf.codegen.ecore; x-installation:="greedy"; resolution:="optional"
+                       Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+                         -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+         Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"; visibility:="reexport"
+           -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+              com.google.inject [23]
+                Unresolved requirement: Import-Package: javax.inject
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.utils; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.emf.mwe.utils; bundle-version="1.3.20.v201605261103"
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend; bundle-version="1.1.0"; x-installation:="greedy"; resolution:="optional"
+           -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+
+
+!ENTRY org.eclipse.xtext 2 0 2016-11-21 20:18:25.031
+!MESSAGE Could not resolve module: org.eclipse.xtext [12]
+  Unresolved requirement: Require-Bundle: org.objectweb.asm; bundle-version="[5.0.1,6.0.0)"; resolution:="optional"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"; visibility:="reexport"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtend.typesystem.emf; bundle-version="1.0.1"; x-installation:="greedy"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.xtend.typesystem.emf; bundle-version="2.2.0.v201605260315"; singleton:="true"
+       org.eclipse.xtend.typesystem.emf [35]
+         Unresolved requirement: Require-Bundle: org.eclipse.xtend
+           -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+              org.eclipse.xtend [30]
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                     org.eclipse.emf.mwe.core [27]
+                       Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+         Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+           -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+              org.eclipse.emf.mwe.utils [2]
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.codegen.ecore; x-installation:="greedy"; resolution:="optional"
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+  Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"; visibility:="reexport"
+    -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+       com.google.inject [23]
+         Unresolved requirement: Import-Package: javax.inject
+  Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.utils; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.emf.mwe.utils; bundle-version="1.3.20.v201605261103"
+  Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtend; bundle-version="1.1.0"; x-installation:="greedy"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+
+
+!ENTRY org.eclipse.xtext.ui 2 0 2016-11-21 20:18:25.037
+!MESSAGE Could not resolve module: org.eclipse.xtext.ui [22]
+  Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="3.4.0"; visibility:="reexport"
+
+
+!ENTRY com.capstone.mydsl.ide 2 0 2016-11-21 20:18:25.043
+!MESSAGE Could not resolve module: com.capstone.mydsl.ide [17]
+  Unresolved requirement: Require-Bundle: com.capstone.mydsl
+    -> Bundle-SymbolicName: com.capstone.mydsl; bundle-version="1.0.0.qualifier"; singleton:="true"
+       com.capstone.mydsl [7]
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext.xbase
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext
+           -> Bundle-SymbolicName: org.eclipse.xtext; bundle-version="2.10.0.v201605250459"; singleton:="true"
+              org.eclipse.xtext [12]
+                Unresolved requirement: Require-Bundle: org.objectweb.asm; bundle-version="[5.0.1,6.0.0)"; resolution:="optional"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"; visibility:="reexport"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend.typesystem.emf; bundle-version="1.0.1"; x-installation:="greedy"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.xtend.typesystem.emf; bundle-version="2.2.0.v201605260315"; singleton:="true"
+                     org.eclipse.xtend.typesystem.emf [35]
+                       Unresolved requirement: Require-Bundle: org.eclipse.xtend
+                         -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+                            org.eclipse.xtend [30]
+                              Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+                                -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                                   org.eclipse.emf.mwe.core [27]
+                                     Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+                       Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+                         -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+                            org.eclipse.emf.mwe.utils [2]
+                              Unresolved requirement: Require-Bundle: org.eclipse.emf.codegen.ecore; x-installation:="greedy"; resolution:="optional"
+                              Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+                                -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"; visibility:="reexport"
+                  -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+                     com.google.inject [23]
+                       Unresolved requirement: Import-Package: javax.inject
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.utils; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.utils; bundle-version="1.3.20.v201605261103"
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend; bundle-version="1.1.0"; x-installation:="greedy"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+
+
+!ENTRY org.eclipse.xtend 2 0 2016-11-21 20:18:25.049
+!MESSAGE Could not resolve module: org.eclipse.xtend [30]
+  Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+    -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+       org.eclipse.emf.mwe.core [27]
+         Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+
+
+!ENTRY org.eclipse.emf.mwe2.runtime 2 0 2016-11-21 20:18:25.054
+!MESSAGE Could not resolve module: org.eclipse.emf.mwe2.runtime [32]
+  Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"
+    -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+       com.google.inject [23]
+         Unresolved requirement: Import-Package: javax.inject
+
+
+!ENTRY org.eclipse.xtext.ui.shared 2 0 2016-11-21 20:18:25.059
+!MESSAGE Could not resolve module: org.eclipse.xtext.ui.shared [28]
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.core; bundle-version="3.6.0"; x-installation:="greedy"; resolution:="optional"
+  Unresolved requirement: Require-Bundle: org.eclipse.jdt.ui; bundle-version="3.6.0"; x-installation:="greedy"; resolution:="optional"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.common.types.ui; bundle-version="[2.10.0,3.0.0)"; x-installation:="greedy"; resolution:="optional"
+  Unresolved requirement: Require-Bundle: org.eclipse.ui.ide; bundle-version="[3.8.0,4.0.0)"; x-installation:="greedy"; resolution:="optional"
+  Unresolved requirement: Require-Bundle: org.eclipse.core.expressions; bundle-version="[3.4.0,4.0.0)"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.ui; bundle-version="[2.10.0,3.0.0)"; x-installation:="greedy"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.xtext.ui; bundle-version="2.10.0.v201605250459"; singleton:="true"
+       org.eclipse.xtext.ui [22]
+         Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="3.4.0"; visibility:="reexport"
+  Unresolved requirement: Require-Bundle: org.eclipse.xtext.builder; bundle-version="[2.10.0,3.0.0)"; x-installation:="greedy"; resolution:="optional"
+    -> Bundle-SymbolicName: org.eclipse.xtext.builder; bundle-version="2.10.0.v201605250459"; singleton:="true"
+       org.eclipse.xtext.builder [29]
+         Unresolved requirement: Require-Bundle: org.eclipse.xtext; bundle-version="[2.10.0,3.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.xtext; bundle-version="2.10.0.v201605250459"; singleton:="true"
+              org.eclipse.xtext [12]
+                Unresolved requirement: Require-Bundle: org.objectweb.asm; bundle-version="[5.0.1,6.0.0)"; resolution:="optional"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtext.util; bundle-version="[2.10.0,3.0.0)"; visibility:="reexport"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend.typesystem.emf; bundle-version="1.0.1"; x-installation:="greedy"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.xtend.typesystem.emf; bundle-version="2.2.0.v201605260315"; singleton:="true"
+                     org.eclipse.xtend.typesystem.emf [35]
+                       Unresolved requirement: Require-Bundle: org.eclipse.xtend
+                         -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+                            org.eclipse.xtend [30]
+                              Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+                                -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                                   org.eclipse.emf.mwe.core [27]
+                                     Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+                       Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+                         -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+                            org.eclipse.emf.mwe.utils [2]
+                              Unresolved requirement: Require-Bundle: org.eclipse.emf.codegen.ecore; x-installation:="greedy"; resolution:="optional"
+                              Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+                                -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                Unresolved requirement: Require-Bundle: com.google.inject; bundle-version="3.0.0"; visibility:="reexport"
+                  -> Bundle-SymbolicName: com.google.inject; bundle-version="3.0.0.v201605172100"
+                     com.google.inject [23]
+                       Unresolved requirement: Import-Package: javax.inject
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.utils; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.utils; bundle-version="1.3.20.v201605261103"
+                Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; bundle-version="1.2.0"; x-installation:="greedy"; visibility:="reexport"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+                Unresolved requirement: Require-Bundle: org.eclipse.xtend; bundle-version="1.1.0"; x-installation:="greedy"; resolution:="optional"
+                  -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+
+
+!ENTRY org.eclipse.ecf.provider.filetransfer 2 0 2016-11-21 20:18:25.066
+!MESSAGE Could not resolve module: org.eclipse.ecf.provider.filetransfer [3]
+  Unresolved requirement: Import-Package: org.eclipse.core.net.proxy; resolution:="optional"
+  Unresolved requirement: Import-Package: org.eclipse.core.runtime.jobs
+
+
+!ENTRY org.eclipse.emf.common.ui 2 0 2016-11-21 20:18:25.070
+!MESSAGE Could not resolve module: org.eclipse.emf.common.ui [5]
+  Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="[3.5.0,4.0.0)"
+
+
+!ENTRY org.eclipse.ui.console 2 0 2016-11-21 20:18:25.076
+!MESSAGE Could not resolve module: org.eclipse.ui.console [33]
+  Unresolved requirement: Require-Bundle: org.eclipse.ui; bundle-version="[3.5.0,4.0.0)"
+
+
+!ENTRY org.eclipse.xpand 2 0 2016-11-21 20:18:25.082
+!MESSAGE Could not resolve module: org.eclipse.xpand [25]
+  Unresolved requirement: Require-Bundle: org.eclipse.xtend
+    -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+       org.eclipse.xtend [30]
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+              org.eclipse.emf.mwe.core [27]
+                Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+
+
+!ENTRY com.capstone.mydsl.product 2 0 2016-11-21 20:18:25.092
+!MESSAGE Could not resolve module: com.capstone.mydsl.product [6]
+  Unresolved requirement: Require-Bundle: org.eclipse.ui
+
+
+!ENTRY org.eclipse.emf.mwe.core 2 0 2016-11-21 20:18:25.097
+!MESSAGE Could not resolve module: org.eclipse.emf.mwe.core [27]
+  Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+
+
+!ENTRY org.eclipse.emf.mwe.utils 2 0 2016-11-21 20:18:25.102
+!MESSAGE Could not resolve module: org.eclipse.emf.mwe.utils [2]
+  Unresolved requirement: Require-Bundle: org.eclipse.emf.codegen.ecore; x-installation:="greedy"; resolution:="optional"
+  Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+    -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+       org.eclipse.emf.mwe.core [27]
+         Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+
+
+!ENTRY org.eclipse.emf.edit.ui 2 0 2016-11-21 20:18:25.106
+!MESSAGE Could not resolve module: org.eclipse.emf.edit.ui [4]
+  Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="[3.5.0,4.0.0)"
+
+
+!ENTRY org.eclipse.ui.views.log 2 0 2016-11-21 20:18:25.110
+!MESSAGE Could not resolve module: org.eclipse.ui.views.log [10]
+  Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="[3.2.0,4.0.0)"
+
+
+!ENTRY org.eclipse.xtend.typesystem.emf 2 0 2016-11-21 20:18:25.115
+!MESSAGE Could not resolve module: org.eclipse.xtend.typesystem.emf [35]
+  Unresolved requirement: Require-Bundle: org.eclipse.xtend
+    -> Bundle-SymbolicName: org.eclipse.xtend; bundle-version="2.2.0.v201605260315"
+       org.eclipse.xtend [30]
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core; visibility:="reexport"
+           -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+              org.eclipse.emf.mwe.core [27]
+                Unresolved requirement: Require-Bundle: org.eclipse.core.runtime
+  Unresolved requirement: Import-Package: org.eclipse.emf.mwe.utils
+    -> Export-Package: org.eclipse.emf.mwe.utils; bundle-symbolic-name="org.eclipse.emf.mwe.utils"; bundle-version="1.3.20.v201605261103"; version="0.0.0"
+       org.eclipse.emf.mwe.utils [2]
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.codegen.ecore; x-installation:="greedy"; resolution:="optional"
+         Unresolved requirement: Require-Bundle: org.eclipse.emf.mwe.core
+           -> Bundle-SymbolicName: org.eclipse.emf.mwe.core; bundle-version="1.3.20.v201605261103"; singleton:="true"
+
+
+!ENTRY org.eclipse.xsd 2 0 2016-11-21 20:18:25.120
+!MESSAGE Could not resolve module: org.eclipse.xsd [16]
+  Unresolved requirement: Require-Bundle: org.eclipse.core.runtime; bundle-version="[3.5.0,4.0.0)"
+
+
+!ENTRY org.eclipse.osgi 4 0 2016-11-21 20:18:25.124
+!MESSAGE Application error
+!STACK 1
+java.lang.IllegalStateException: Unable to acquire application service. Ensure that the org.eclipse.core.runtime bundle is resolved and started (see config.ini).
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:78)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)

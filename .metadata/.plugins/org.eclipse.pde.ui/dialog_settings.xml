@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="false" key="initLaunch"/>
+	<item value="false" key="generateActivator"/>
+	<item value="3.5 or greater" key="targetName"/>
+	<item value="false" key="uiPlugin"/>
+	<item value="false" key="apiAnalysis"/>
+	<item value="false" key="rcpPlugin"/>
+	<item value="false" key="osgiProject"/>
+	<item value="2" key="org.eclipse.pde.ui.synchronizeVersions.mode"/>
+	<list key="providers">
+		<item value="CAPSTONE"/>
+	</list>
+	<section name="org.eclipse.pde.ui.dialogs.FeatureSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="387" key="DIALOG_X_ORIGIN"/>
+			<item value="35" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+	<section name="PDEFormActionManager">
+		<list key="RecentLaunches">
+			<item value="org.eclipse.pde.ui.runtimeWorkbenchShortcut"/>
+		</list>
+	</section>
+	<section name="org.eclipse.pde.ui.PLUGIN_STATUS_DIALOG">
+		<item value="408" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="382" key="DIALOG_HEIGHT"/>
+		<item value="308" key="DIALOG_X_ORIGIN"/>
+		<item value="66" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="pde-form-editor">
+		<item value="dependencies" key="org.eclipse.pde.ui.manifestEditor"/>
+	</section>
+	<section name="org.eclipse.pde.ui.dialogs.PluginSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="387" key="DIALOG_X_ORIGIN"/>
+			<item value="35" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+	<section name="PluginExportWizard">
+		<item value="C:\Users\lequanghiep\Desktop" key="destination0"/>
+		<item value="C:\Users\lequanghiep\Desktop" key="destination1"/>
+		<item value="" key="keypass"/>
+		<item value="Include source in exported plug-ins" key="exportSourceFormat"/>
+		<item value="false" key="signJAR"/>
+		<item value="true" key="exportUpdate"/>
+		<item value="false" key="saveAsAnt"/>
+		<item value="true" key="exportSource"/>
+		<item value="true" key="allowBinaryCycles"/>
+		<item value="" key="password"/>
+		<item value="201611202331" key="qualifierName"/>
+		<item value="true" key="useWorkspaceCompiledClasses"/>
+		<item value="3" key="exportType"/>
+		<item value="false" key="qualifier"/>
+		<item value="" key="alias"/>
+		<item value="" key="keystore"/>
+		<item value="C:/Users/lequanghiep/workspace/capstone/.metadata/.plugins/org.eclipse.pde.core/install/" key="installDestination0"/>
+		<item value="C:/Users/lequanghiep/workspace/capstone/.metadata/.plugins/org.eclipse.pde.core/install/" key="installDestination1"/>
+	</section>
+	<section name="ProductExportWizard">
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="FeatureExportWizard">
+		<item value="C:\Users\lequanghiep\Desktop" key="destination0"/>
+		<item value="C:\Users\lequanghiep\Desktop" key="destination1"/>
+		<item value="" key="keypass"/>
+		<item value="" key="siteURL"/>
+		<item value="true" key="create_categories"/>
+		<item value="Generate source bundles" key="exportSourceFormat"/>
+		<item value="false" key="signJAR"/>
+		<item value="true" key="exportUpdate"/>
+		<item value="false" key="saveAsAnt"/>
+		<item value="false" key="exportSource"/>
+		<item value="" key="category_file"/>
+		<item value="true" key="allowBinaryCycles"/>
+		<item value="" key="password"/>
+		<item value="201612012325" key="qualifierName"/>
+		<item value="false" key="useWorkspaceCompiledClasses"/>
+		<item value="1" key="exportType"/>
+		<item value="false" key="qualifier"/>
+		<item value="" key="alias"/>
+		<item value="false" key="jnlp"/>
+		<item value="" key="keystore"/>
+		<item value="" key="jre"/>
+		<item value="true" key="p2metadata"/>
+	</section>
+</section>
