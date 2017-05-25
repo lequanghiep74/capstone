@@ -26,7 +26,7 @@ public class DomainmodelSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_Define_LeftParenthesisKeyword_3_q;
 	protected AbstractElementAlias match_Define_RightParenthesisKeyword_5_q;
 	protected AbstractElementAlias match_Define___ConditionOperationParserRuleCall_6_0_LeftParenthesisKeyword_6_1_q___CompareFormulaParserRuleCall_6_2_0_or_MyIDParserRuleCall_6_2_1___RightParenthesisKeyword_6_3_q__a;
-	protected AbstractElementAlias match_myDSL_EnumParserRuleCall_0_or_PreconditionParserRuleCall_2_or_RunParserRuleCall_5_or_TestcaseParserRuleCall_3;
+	protected AbstractElementAlias match_myDSL_EnumParserRuleCall_0_or_ExampleParserRuleCall_6_or_LimitParserRuleCall_7_or_PreconditionParserRuleCall_2_or_RunParserRuleCall_5_or_TestcaseParserRuleCall_3;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
@@ -35,7 +35,7 @@ public class DomainmodelSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_Define_LeftParenthesisKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDefineAccess().getLeftParenthesisKeyword_3());
 		match_Define_RightParenthesisKeyword_5_q = new TokenAlias(false, true, grammarAccess.getDefineAccess().getRightParenthesisKeyword_5());
 		match_Define___ConditionOperationParserRuleCall_6_0_LeftParenthesisKeyword_6_1_q___CompareFormulaParserRuleCall_6_2_0_or_MyIDParserRuleCall_6_2_1___RightParenthesisKeyword_6_3_q__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getDefineAccess().getConditionOperationParserRuleCall_6_0()), new TokenAlias(false, true, grammarAccess.getDefineAccess().getLeftParenthesisKeyword_6_1()), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getDefineAccess().getCompareFormulaParserRuleCall_6_2_0()), new TokenAlias(false, false, grammarAccess.getDefineAccess().getMyIDParserRuleCall_6_2_1())), new TokenAlias(false, true, grammarAccess.getDefineAccess().getRightParenthesisKeyword_6_3()));
-		match_myDSL_EnumParserRuleCall_0_or_PreconditionParserRuleCall_2_or_RunParserRuleCall_5_or_TestcaseParserRuleCall_3 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getMyDSLAccess().getEnumParserRuleCall_0()), new TokenAlias(false, false, grammarAccess.getMyDSLAccess().getPreconditionParserRuleCall_2()), new TokenAlias(false, false, grammarAccess.getMyDSLAccess().getRunParserRuleCall_5()), new TokenAlias(false, false, grammarAccess.getMyDSLAccess().getTestcaseParserRuleCall_3()));
+		match_myDSL_EnumParserRuleCall_0_or_ExampleParserRuleCall_6_or_LimitParserRuleCall_7_or_PreconditionParserRuleCall_2_or_RunParserRuleCall_5_or_TestcaseParserRuleCall_3 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getMyDSLAccess().getEnumParserRuleCall_0()), new TokenAlias(false, false, grammarAccess.getMyDSLAccess().getExampleParserRuleCall_6()), new TokenAlias(false, false, grammarAccess.getMyDSLAccess().getLimitParserRuleCall_7()), new TokenAlias(false, false, grammarAccess.getMyDSLAccess().getPreconditionParserRuleCall_2()), new TokenAlias(false, false, grammarAccess.getMyDSLAccess().getRunParserRuleCall_5()), new TokenAlias(false, false, grammarAccess.getMyDSLAccess().getTestcaseParserRuleCall_3()));
 	}
 	
 	@Override
@@ -48,6 +48,10 @@ public class DomainmodelSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getDatatypeToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getEnumRule())
 			return getEnumToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getExampleRule())
+			return getExampleToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getLimitRule())
+			return getLimitToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getMyIDRule())
 			return getMyIDToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getPreconditionRule())
@@ -96,7 +100,28 @@ public class DomainmodelSyntacticSequencer extends AbstractSyntacticSequencer {
 	}
 	
 	/**
-	 * MyID: '-'?(ID | ('!')ID);
+	 * Example: 'example' '{' 
+	 * 		Variable '=' Variable
+	 * 	'}'
+	 * ;
+	 */
+	protected String getExampleToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "example{=}";
+	}
+	
+	/**
+	 * Limit: 'limit' DIGIT;
+	 */
+	protected String getLimitToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "limit";
+	}
+	
+	/**
+	 * MyID: (ID | ('!')ID) (Method)*;
 	 */
 	protected String getMyIDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
@@ -151,18 +176,18 @@ public class DomainmodelSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Define_RightParenthesisKeyword_5_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Define___ConditionOperationParserRuleCall_6_0_LeftParenthesisKeyword_6_1_q___CompareFormulaParserRuleCall_6_2_0_or_MyIDParserRuleCall_6_2_1___RightParenthesisKeyword_6_3_q__a.equals(syntax))
 				emit_Define___ConditionOperationParserRuleCall_6_0_LeftParenthesisKeyword_6_1_q___CompareFormulaParserRuleCall_6_2_0_or_MyIDParserRuleCall_6_2_1___RightParenthesisKeyword_6_3_q__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_myDSL_EnumParserRuleCall_0_or_PreconditionParserRuleCall_2_or_RunParserRuleCall_5_or_TestcaseParserRuleCall_3.equals(syntax))
-				emit_myDSL_EnumParserRuleCall_0_or_PreconditionParserRuleCall_2_or_RunParserRuleCall_5_or_TestcaseParserRuleCall_3(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_myDSL_EnumParserRuleCall_0_or_ExampleParserRuleCall_6_or_LimitParserRuleCall_7_or_PreconditionParserRuleCall_2_or_RunParserRuleCall_5_or_TestcaseParserRuleCall_3.equals(syntax))
+				emit_myDSL_EnumParserRuleCall_0_or_ExampleParserRuleCall_6_or_LimitParserRuleCall_7_or_PreconditionParserRuleCall_2_or_RunParserRuleCall_5_or_TestcaseParserRuleCall_3(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
 	/**
 	 * Ambiguous syntax:
-	 *     MyID | CompareFormula
+	 *     CompareFormula | MyID
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=ID '{' '('? (ambiguity) ')'? (ConditionOperation '('? (CompareFormula | MyID) ')'?)* '}' (rule end)
+	 *     name=ID '{' '('? (ambiguity) ')'? (ConditionOperation '('? (MyID | CompareFormula) ')'?)* '}' (rule end)
 	 */
 	protected void emit_Define_CompareFormulaParserRuleCall_4_0_or_MyIDParserRuleCall_4_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -173,7 +198,7 @@ public class DomainmodelSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '('?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=ID '{' (ambiguity) (MyID | CompareFormula) ')'? (ConditionOperation '('? (CompareFormula | MyID) ')'?)* '}' (rule end)
+	 *     name=ID '{' (ambiguity) (CompareFormula | MyID) ')'? (ConditionOperation '('? (MyID | CompareFormula) ')'?)* '}' (rule end)
 	 */
 	protected void emit_Define_LeftParenthesisKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -184,7 +209,7 @@ public class DomainmodelSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ')'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=ID '{' '('? (MyID | CompareFormula) (ambiguity) (ConditionOperation '('? (CompareFormula | MyID) ')'?)* '}' (rule end)
+	 *     name=ID '{' '('? (CompareFormula | MyID) (ambiguity) (ConditionOperation '('? (MyID | CompareFormula) ')'?)* '}' (rule end)
 	 */
 	protected void emit_Define_RightParenthesisKeyword_5_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -192,10 +217,10 @@ public class DomainmodelSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     (ConditionOperation '('? (CompareFormula | MyID) ')'?)*
+	 *     (ConditionOperation '('? (MyID | CompareFormula) ')'?)*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=ID '{' '('? (MyID | CompareFormula) ')'? (ambiguity) '}' (rule end)
+	 *     name=ID '{' '('? (CompareFormula | MyID) ')'? (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Define___ConditionOperationParserRuleCall_6_0_LeftParenthesisKeyword_6_1_q___CompareFormulaParserRuleCall_6_2_0_or_MyIDParserRuleCall_6_2_1___RightParenthesisKeyword_6_3_q__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -203,12 +228,19 @@ public class DomainmodelSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     Run | Enum | Testcase | Precondition
+	 *     (
+	  *         Limit | 
+	  *         Example | 
+	  *         Precondition | 
+	  *         Testcase | 
+	  *         Run | 
+	  *         Enum
+	  *     )
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
 	 */
-	protected void emit_myDSL_EnumParserRuleCall_0_or_PreconditionParserRuleCall_2_or_RunParserRuleCall_5_or_TestcaseParserRuleCall_3(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_myDSL_EnumParserRuleCall_0_or_ExampleParserRuleCall_6_or_LimitParserRuleCall_7_or_PreconditionParserRuleCall_2_or_RunParserRuleCall_5_or_TestcaseParserRuleCall_3(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

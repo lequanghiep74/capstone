@@ -7,8 +7,8 @@ Model:
 	myDSL+=myDSL*;
 	
 myDSL:
-	Enum | Define | Precondition | Testcase | Function | Run;
-	
+	Enum | Define | Precondition | Testcase | Function | Run | Example | Limit;
+
 terminal DIGIT:
     '-'?('0'..'9')*
 ;
@@ -33,7 +33,9 @@ MathFormula: '('? Variable ( MathOperation Variable)* ')'?;
 
 CompareFormula: MathFormula CompareOperation MathFormula | MathFormula CompareOperation STRING;
 
-MyID: '-'?(ID | ('!')ID);
+Method: '.'('onlyDigit' | 'onlyLetter' | 'length' | 'contain')('(' (STRING)* ')')?;
+  		  
+MyID: (ID | ('!')ID) (Method)*;
 
 TestcaseElement: CompareFormula | MathFormula;
 
@@ -54,6 +56,15 @@ Precondition: 'precondition' '{'
 		CompareFormula (ConditionOperation CompareFormula)*
 	'}'
 ;
+
+//example
+Example: 'example' '{' 
+		Variable '=' Variable
+	'}'
+;
+
+//limit
+Limit: 'limit' DIGIT;
 
 TestCondition: STRING ('('? TestcaseElement ')'? '('? (ConditionOperation '('? TestcaseElement')'?)* ')'?)?
 ;

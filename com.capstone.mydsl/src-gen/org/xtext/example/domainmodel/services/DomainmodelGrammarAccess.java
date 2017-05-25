@@ -46,12 +46,14 @@ public class DomainmodelGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTestcaseParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cFunctionParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cRunParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cExampleParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cLimitParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		
 		//myDSL:
-		//	Enum | Define | Precondition | Testcase | Function | Run;
+		//	Enum | Define | Precondition | Testcase | Function | Run | Example | Limit;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Enum | Define | Precondition | Testcase | Function | Run
+		//Enum | Define | Precondition | Testcase | Function | Run | Example | Limit
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Enum
@@ -71,6 +73,12 @@ public class DomainmodelGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Run
 		public RuleCall getRunParserRuleCall_5() { return cRunParserRuleCall_5; }
+		
+		//Example
+		public RuleCall getExampleParserRuleCall_6() { return cExampleParserRuleCall_6; }
+		
+		//Limit
+		public RuleCall getLimitParserRuleCall_7() { return cLimitParserRuleCall_7; }
 	}
 	public class ConditionOperationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.domainmodel.Domainmodel.ConditionOperation");
@@ -259,40 +267,91 @@ public class DomainmodelGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getSTRINGTerminalRuleCall_1_2() { return cSTRINGTerminalRuleCall_1_2; }
 	}
+	public class MethodElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.domainmodel.Domainmodel.Method");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cFullStopKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Keyword cOnlyDigitKeyword_1_0 = (Keyword)cAlternatives_1.eContents().get(0);
+		private final Keyword cOnlyLetterKeyword_1_1 = (Keyword)cAlternatives_1.eContents().get(1);
+		private final Keyword cLengthKeyword_1_2 = (Keyword)cAlternatives_1.eContents().get(2);
+		private final Keyword cContainKeyword_1_3 = (Keyword)cAlternatives_1.eContents().get(3);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cLeftParenthesisKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final RuleCall cSTRINGTerminalRuleCall_2_1 = (RuleCall)cGroup_2.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		
+		//Method:
+		//	'.' ('onlyDigit' | 'onlyLetter' | 'length' | 'contain') ('(' STRING* ')')?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'.' ('onlyDigit' | 'onlyLetter' | 'length' | 'contain') ('(' STRING* ')')?
+		public Group getGroup() { return cGroup; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_0() { return cFullStopKeyword_0; }
+		
+		//'onlyDigit' | 'onlyLetter' | 'length' | 'contain'
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+		
+		//'onlyDigit'
+		public Keyword getOnlyDigitKeyword_1_0() { return cOnlyDigitKeyword_1_0; }
+		
+		//'onlyLetter'
+		public Keyword getOnlyLetterKeyword_1_1() { return cOnlyLetterKeyword_1_1; }
+		
+		//'length'
+		public Keyword getLengthKeyword_1_2() { return cLengthKeyword_1_2; }
+		
+		//'contain'
+		public Keyword getContainKeyword_1_3() { return cContainKeyword_1_3; }
+		
+		//('(' STRING* ')')?
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//'('
+		public Keyword getLeftParenthesisKeyword_2_0() { return cLeftParenthesisKeyword_2_0; }
+		
+		//STRING*
+		public RuleCall getSTRINGTerminalRuleCall_2_1() { return cSTRINGTerminalRuleCall_2_1; }
+		
+		//')'
+		public Keyword getRightParenthesisKeyword_2_2() { return cRightParenthesisKeyword_2_2; }
+	}
 	public class MyIDElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.domainmodel.Domainmodel.MyID");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_1_0 = (RuleCall)cAlternatives_1.eContents().get(0);
-		private final Group cGroup_1_1 = (Group)cAlternatives_1.eContents().get(1);
-		private final Keyword cExclamationMarkKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1_1_1 = (RuleCall)cGroup_1_1.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
+		private final Group cGroup_0_1 = (Group)cAlternatives_0.eContents().get(1);
+		private final Keyword cExclamationMarkKeyword_0_1_0 = (Keyword)cGroup_0_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_0_1_1 = (RuleCall)cGroup_0_1.eContents().get(1);
+		private final RuleCall cMethodParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
 		//MyID:
-		//	'-'? (ID | '!' ID);
+		//	(ID | '!' ID) Method*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'-'? (ID | '!' ID)
+		//(ID | '!' ID) Method*
 		public Group getGroup() { return cGroup; }
 		
-		//'-'?
-		public Keyword getHyphenMinusKeyword_0() { return cHyphenMinusKeyword_0; }
-		
 		//ID | '!' ID
-		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 		
 		//ID
-		public RuleCall getIDTerminalRuleCall_1_0() { return cIDTerminalRuleCall_1_0; }
+		public RuleCall getIDTerminalRuleCall_0_0() { return cIDTerminalRuleCall_0_0; }
 		
 		//'!' ID
-		public Group getGroup_1_1() { return cGroup_1_1; }
+		public Group getGroup_0_1() { return cGroup_0_1; }
 		
 		//'!'
-		public Keyword getExclamationMarkKeyword_1_1_0() { return cExclamationMarkKeyword_1_1_0; }
+		public Keyword getExclamationMarkKeyword_0_1_0() { return cExclamationMarkKeyword_0_1_0; }
 		
 		//ID
-		public RuleCall getIDTerminalRuleCall_1_1_1() { return cIDTerminalRuleCall_1_1_1; }
+		public RuleCall getIDTerminalRuleCall_0_1_1() { return cIDTerminalRuleCall_0_1_1; }
+		
+		//Method*
+		public RuleCall getMethodParserRuleCall_1() { return cMethodParserRuleCall_1; }
 	}
 	public class TestcaseElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.domainmodel.Domainmodel.TestcaseElement");
@@ -499,6 +558,64 @@ public class DomainmodelGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+	public class ExampleElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.domainmodel.Domainmodel.Example");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cExampleKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final RuleCall cVariableParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Keyword cEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final RuleCall cVariableParserRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		////example
+		//Example:
+		//	'example' '{'
+		//	Variable '=' Variable
+		//	'}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'example' '{' Variable '=' Variable '}'
+		public Group getGroup() { return cGroup; }
+		
+		//'example'
+		public Keyword getExampleKeyword_0() { return cExampleKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//Variable
+		public RuleCall getVariableParserRuleCall_2() { return cVariableParserRuleCall_2; }
+		
+		//'='
+		public Keyword getEqualsSignKeyword_3() { return cEqualsSignKeyword_3; }
+		
+		//Variable
+		public RuleCall getVariableParserRuleCall_4() { return cVariableParserRuleCall_4; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+	public class LimitElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.domainmodel.Domainmodel.Limit");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLimitKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cDIGITTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		
+		////limit
+		//Limit:
+		//	'limit' DIGIT;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'limit' DIGIT
+		public Group getGroup() { return cGroup; }
+		
+		//'limit'
+		public Keyword getLimitKeyword_0() { return cLimitKeyword_0; }
+		
+		//DIGIT
+		public RuleCall getDIGITTerminalRuleCall_1() { return cDIGITTerminalRuleCall_1; }
 	}
 	public class TestConditionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.domainmodel.Domainmodel.TestCondition");
@@ -707,12 +824,15 @@ public class DomainmodelGrammarAccess extends AbstractGrammarElementFinder {
 	private final VariableElements pVariable;
 	private final MathFormulaElements pMathFormula;
 	private final CompareFormulaElements pCompareFormula;
+	private final MethodElements pMethod;
 	private final MyIDElements pMyID;
 	private final TestcaseElementElements pTestcaseElement;
 	private final EnumElements pEnum;
 	private final EnumOptionsElements pEnumOptions;
 	private final DefineElements pDefine;
 	private final PreconditionElements pPrecondition;
+	private final ExampleElements pExample;
+	private final LimitElements pLimit;
 	private final TestConditionElements pTestCondition;
 	private final TestcaseElements pTestcase;
 	private final DatatypeElements pDatatype;
@@ -739,12 +859,15 @@ public class DomainmodelGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVariable = new VariableElements();
 		this.pMathFormula = new MathFormulaElements();
 		this.pCompareFormula = new CompareFormulaElements();
+		this.pMethod = new MethodElements();
 		this.pMyID = new MyIDElements();
 		this.pTestcaseElement = new TestcaseElementElements();
 		this.pEnum = new EnumElements();
 		this.pEnumOptions = new EnumOptionsElements();
 		this.pDefine = new DefineElements();
 		this.pPrecondition = new PreconditionElements();
+		this.pExample = new ExampleElements();
+		this.pLimit = new LimitElements();
 		this.pTestCondition = new TestConditionElements();
 		this.pTestcase = new TestcaseElements();
 		this.pDatatype = new DatatypeElements();
@@ -790,7 +913,7 @@ public class DomainmodelGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//myDSL:
-	//	Enum | Define | Precondition | Testcase | Function | Run;
+	//	Enum | Define | Precondition | Testcase | Function | Run | Example | Limit;
 	public MyDSLElements getMyDSLAccess() {
 		return pMyDSL;
 	}
@@ -878,8 +1001,18 @@ public class DomainmodelGrammarAccess extends AbstractGrammarElementFinder {
 		return getCompareFormulaAccess().getRule();
 	}
 	
+	//Method:
+	//	'.' ('onlyDigit' | 'onlyLetter' | 'length' | 'contain') ('(' STRING* ')')?;
+	public MethodElements getMethodAccess() {
+		return pMethod;
+	}
+	
+	public ParserRule getMethodRule() {
+		return getMethodAccess().getRule();
+	}
+	
 	//MyID:
-	//	'-'? (ID | '!' ID);
+	//	(ID | '!' ID) Method*;
 	public MyIDElements getMyIDAccess() {
 		return pMyID;
 	}
@@ -943,6 +1076,30 @@ public class DomainmodelGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getPreconditionRule() {
 		return getPreconditionAccess().getRule();
+	}
+	
+	////example
+	//Example:
+	//	'example' '{'
+	//	Variable '=' Variable
+	//	'}';
+	public ExampleElements getExampleAccess() {
+		return pExample;
+	}
+	
+	public ParserRule getExampleRule() {
+		return getExampleAccess().getRule();
+	}
+	
+	////limit
+	//Limit:
+	//	'limit' DIGIT;
+	public LimitElements getLimitAccess() {
+		return pLimit;
+	}
+	
+	public ParserRule getLimitRule() {
+		return getLimitAccess().getRule();
 	}
 	
 	//TestCondition:

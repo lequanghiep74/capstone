@@ -37,7 +37,8 @@ public class DomainmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCompareOperationAccess().getAlternatives(), "rule__CompareOperation__Alternatives");
 					put(grammarAccess.getVariableAccess().getAlternatives(), "rule__Variable__Alternatives");
 					put(grammarAccess.getCompareFormulaAccess().getAlternatives(), "rule__CompareFormula__Alternatives");
-					put(grammarAccess.getMyIDAccess().getAlternatives_1(), "rule__MyID__Alternatives_1");
+					put(grammarAccess.getMethodAccess().getAlternatives_1(), "rule__Method__Alternatives_1");
+					put(grammarAccess.getMyIDAccess().getAlternatives_0(), "rule__MyID__Alternatives_0");
 					put(grammarAccess.getTestcaseElementAccess().getAlternatives(), "rule__TestcaseElement__Alternatives");
 					put(grammarAccess.getEnumAccess().getAlternatives_1(), "rule__Enum__Alternatives_1");
 					put(grammarAccess.getDefineAccess().getAlternatives_4(), "rule__Define__Alternatives_4");
@@ -47,13 +48,17 @@ public class DomainmodelParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMathFormulaAccess().getGroup_2(), "rule__MathFormula__Group_2__0");
 					put(grammarAccess.getCompareFormulaAccess().getGroup_0(), "rule__CompareFormula__Group_0__0");
 					put(grammarAccess.getCompareFormulaAccess().getGroup_1(), "rule__CompareFormula__Group_1__0");
+					put(grammarAccess.getMethodAccess().getGroup(), "rule__Method__Group__0");
+					put(grammarAccess.getMethodAccess().getGroup_2(), "rule__Method__Group_2__0");
 					put(grammarAccess.getMyIDAccess().getGroup(), "rule__MyID__Group__0");
-					put(grammarAccess.getMyIDAccess().getGroup_1_1(), "rule__MyID__Group_1_1__0");
+					put(grammarAccess.getMyIDAccess().getGroup_0_1(), "rule__MyID__Group_0_1__0");
 					put(grammarAccess.getEnumAccess().getGroup(), "rule__Enum__Group__0");
 					put(grammarAccess.getDefineAccess().getGroup(), "rule__Define__Group__0");
 					put(grammarAccess.getDefineAccess().getGroup_6(), "rule__Define__Group_6__0");
 					put(grammarAccess.getPreconditionAccess().getGroup(), "rule__Precondition__Group__0");
 					put(grammarAccess.getPreconditionAccess().getGroup_3(), "rule__Precondition__Group_3__0");
+					put(grammarAccess.getExampleAccess().getGroup(), "rule__Example__Group__0");
+					put(grammarAccess.getLimitAccess().getGroup(), "rule__Limit__Group__0");
 					put(grammarAccess.getTestConditionAccess().getGroup(), "rule__TestCondition__Group__0");
 					put(grammarAccess.getTestConditionAccess().getGroup_1(), "rule__TestCondition__Group_1__0");
 					put(grammarAccess.getTestConditionAccess().getGroup_1_4(), "rule__TestCondition__Group_1_4__0");

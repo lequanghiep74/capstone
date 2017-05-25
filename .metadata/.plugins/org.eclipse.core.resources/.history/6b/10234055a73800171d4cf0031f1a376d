@@ -1,0 +1,79 @@
+grammar org.xtext.example.domainmodel.Domainmodel with org.eclipse.xtext.common.Terminals
+
+generate domainmodel "http://www.xtext.org/example/domainmodel/Domainmodel"
+
+
+Model:
+	myDSL+=myDSL*;
+	
+myDSL:
+	Enum | Define | Precondition | Testcase | Function | Run | Example | Limit;
+
+terminal DIGIT:
+    '-'?('0'..'9')*
+;
+
+terminal REAL:
+	DIGIT'.'DIGIT
+;
+
+terminal STRING	: 
+  '"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"';
+//  "'" ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
+
+ConditionOperation: '||' | '&&';
+
+MathOperation: '+' | '-' | '*' | '/' | '^' | '%';
+
+CompareOperation: '>' | '<' | '=' | '>=' | '<=';
+
+Variable: MyID | DIGIT | REAL;
+
+MathFormula: '('? Variable ( MathOperation Variable)* ')'?;
+
+CompareFormula: MathFormula CompareOperation MathFormula | MathFormula CompareOperation STRING;
+
+MyID: '-'?(ID | ('!')ID);
+
+TestcaseElement: CompareFormula | MathFormula;
+
+//enum
+
+Enum: 'enum' (ID | 'Int' | 'Real' | 'Bool' | 'String') '{' EnumOptions '}';
+
+EnumOptions: (ID)*;
+
+//define
+Define: 'define' name=ID '{'
+		'('?(CompareFormula | MyID)')'? (ConditionOperation '('?(CompareFormula | MyID)')'?)*
+	'}'
+;
+
+//precondition
+Precondition: 'precondition' '{' 
+		CompareFormula (ConditionOperation CompareFormula)*
+	'}'
+;
+
+//example
+Example: 'example' '{' 
+		Variable '=' Variable
+	'}'
+;
+
+//limit
+Limit: 'limit' DIGIT;
+TestCondition: STRING ('('? TestcaseElement ')'? '('? (ConditionOperation '('? TestcaseElement')'?)* ')'?)?
+;
+//test case
+Testcase : 'testcase' '{'
+		(TestCondition)*
+	'}'
+;
+
+Datatype: 'Int' | 'Real' | 'Bool' | 'String';
+
+Function: 'function' name=ID '(' (Datatype name=ID (',' Datatype name=ID)*)* ')';
+
+Run: 'run';
+	
