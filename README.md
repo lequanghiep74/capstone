@@ -30,18 +30,17 @@
         </soapenv:Body>
     </soapenv:Envelope>
     ```
-    
     * Input parameters:
     
-    |   | Parameter Name | Description | Type | Size | Example |
-    | --- | --- | --- | --- | --- | --- |
-    | **1** | wsqRight | Right fingerprint in WSQ format | byte[] | Uncertain | Bytes |
-    | **2** | wsqLeft | Left fingerprint in WSQ format | byte[] | Uncertain | Bytes |
-    | **3** | nuRuc | RUC number of the entity (Company, Institution) | String | 11 | 10456234572 |
-    | **4** | nuDni | DNI (ID Card) number of citizen | String | 8 | 46235986 |
-    | **5** | codUsuario | DNI (ID Card) of the user who performs the biometric consultation. | String | 8 | 43652415 |
-    | **6** | ipCliente | IP address of customer | String | Uncertain | 10.50.28.170 |
-    | **7** | macCliente | MAC address of customer | String | Uncertain | D4-C9-EHD6-4B-0C |
+|   | Parameter Name | Description | Type | Size | Example |
+| --- | --- | --- | --- | --- | --- |
+| **1** | wsqRight | Right fingerprint in WSQ format | byte[] | Uncertain | Bytes |
+| **2** | wsqLeft | Left fingerprint in WSQ format | byte[] | Uncertain | Bytes |
+| **3** | nuRuc | RUC number of the entity (Company, Institution) | String | 11 | 10456234572 |
+| **4** | nuDni | DNI (ID Card) number of citizen | String | 8 | 46235986 |
+| **5** | codUsuario | DNI (ID Card) of the user who performs the biometric consultation. | String | 8 | 43652415 |
+| **6** | ipCliente | IP address of customer | String | Uncertain | 10.50.28.170 |
+| **7** | macCliente | MAC address of customer | String | Uncertain | D4-C9-EHD6-4B-0C |
        
     * Example: 
     ```xml
