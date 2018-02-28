@@ -65,10 +65,11 @@
         </soapenv:Body>
     </soapenv:Envelope>
     ```
-    
+    <br/>
+    <br/>
+    <br/>
 # 3. Result
 * Output parameters:
-
 
 |   | SOAP Response | Description | Type | 
 | --- | --- | --- | --- |
