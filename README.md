@@ -69,6 +69,7 @@
 # 3. Result
 * Output parameters:
 
+
 |   | SOAP Response | Description | Type | 
 | --- | --- | --- | --- |
 | **1** | Code of result of checkBiometric (Corresponds, No Corresponds and Error). | This code and/or message represents the returned value of the biometric query, the returned values ​​can be:<br/>- If Corresponds (70006) <br/>- Not Corresponding (70007) <br/>- ERROR (Error code of Tables 3 and 4) | byte[] |
