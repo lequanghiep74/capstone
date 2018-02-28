@@ -30,6 +30,7 @@
         </soapenv:Body>
     </soapenv:Envelope>
     ```
+    
     * Input parameters:
     
 |   | Parameter Name | Description | Type | Size | Example |
@@ -41,9 +42,10 @@
 | **5** | codUsuario | DNI (ID Card) of the user who performs the biometric consultation. | String | 8 | 43652415 |
 | **6** | ipCliente | IP address of customer | String | Uncertain | 10.50.28.170 |
 | **7** | macCliente | MAC address of customer | String | Uncertain | D4-C9-EHD6-4B-0C |
-       
+
+
     * Example: 
-    ```xml
+```xml
     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
                   xmlns:impl="https://impl.ws.svb.biometric.reniec.gob.pe/">
         <soapenv:Header/>
@@ -63,7 +65,7 @@
             </impl:verificarIdentidad>
         </soapenv:Body>
     </soapenv:Envelope>
-    ```
+```
     
 # 3. Result
 * Output parameters:
