@@ -31,8 +31,7 @@
     </soapenv:Envelope>
     ```
     
-    * Input parameters:
-    
+    * Input parameterxs:
     |   | Parameter Name | Description | Type | Size | Example |
     | --- | --- | --- | --- | --- | --- |
     | **1** | wsqRight | Right fingerprint in WSQ format | byte[] | Uncertain | Bytes |
@@ -65,6 +64,7 @@
         </soapenv:Body>
     </soapenv:Envelope>
     ```
+    
     <br/>
     <br/>
     <br/>
